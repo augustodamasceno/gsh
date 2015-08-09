@@ -1,14 +1,30 @@
 #!/bin/bash
-# Show git branch on
+# Show git branch
 
-#echo $( git branch | grep \* | tail -c $(wc -c $(git branch | grep \*)) )
-names()
+# Backup PS1
+OLDPS1=$PS1
+
+sgbranch()
 {
-  names=($@)
-  echo ${names[@]:$#-1}
+	if $($n) > 0
+		then
+			eval last=\${$#}
+			echo $last
+	fi
+	#if [ "eval last=\${$#}" == "true" ]
+	#	then
+	#		echo $last	
+	#fi
 
+	#eval last=\${$#}
+	#echo $last
 }
 
-names $( git branch | grep \*)
+# CMD
+sgbranch $( git branch | grep \*)
 
-PS1=$(names $( git branch | grep \*)) - $PS1
+# Change your PS1 for ($ branch_name $) : 
+# 
+# PS1=$PS1$(sgbranch $( git branch | grep \*))$(echo " $ ")
+
+
