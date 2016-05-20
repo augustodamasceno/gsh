@@ -2,3 +2,4 @@
 
 cat alias_cd.cmd >> ~/.bashrc
 cat showGitBranch.cmd  >> ~/.bashrc
+cat markhere.cmd >> ~/.bashrc 
