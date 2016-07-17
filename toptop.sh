@@ -10,7 +10,6 @@ alias_toptop()
 	ps aux | head -1
 	ps aux | sort -rn -k 4,6 | head -3
 	printf '\033[0;31m----------END MONITOR--------\033[0m\n'
-	sleep 3
 }
 alias toptop=alias_toptop
 
