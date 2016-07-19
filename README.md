@@ -10,4 +10,5 @@
 and uncomment 3 and 4.  
 *  toptop : Display Linux processes by resources (the top 3)  
 *  monitor : visual monitoring the system (users, cpu and mem)  
+cpu stats needs sysstat 
 
