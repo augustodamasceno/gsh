@@ -8,13 +8,11 @@
 pre=$1
 if [ ${#1} -gt 0 ]
 then
-	files=*
-
 	userMsg1='Rename all files in this folder adding the prefix \042'
 	echo -n $userMsg1$pre'\042 (y/N) '
 	read ok
 	
-	if [ "$ok" = "Y" ]; then ok="y";echo 'change';fi
+	if [ "$ok" = "Y" ]; then ok="y";fi
 	if [ "$ok" = "y" ]
 	then
 		for i in *
