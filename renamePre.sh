@@ -21,6 +21,6 @@ then
 			echo "renaming $i to $newname"
 			mv $i $newname
 		done
+		mv $0$pre $0
 	fi
 fi
-
