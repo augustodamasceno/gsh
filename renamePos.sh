@@ -19,7 +19,7 @@ then
 		do
 			newname=$i$post
 			echo "renaming $i to $newname"
-			#mv $i $newname
+			mv $i $newname
 		done
 	fi
 fi
