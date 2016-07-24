@@ -1,7 +1,7 @@
 ## Scripts for bash.  
 ### See https://www.gnu.org/software/bash/  
   
-## Run install.sh to add all commands.    
+## Run install.sh to add all .cmd commands.    
   
 ## Scripts  
 *  alias_cd : List directory contents when cd command is used.  
@@ -13,4 +13,5 @@ and uncomment 3 and 4.
 cpu stats needs sysstat   
 *  renamePre : Add prefix to all files in current folder  
 *  renamePos : Add postfix to all files in current folder  
-
+*  aircrackKismet : Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist  
+ 
