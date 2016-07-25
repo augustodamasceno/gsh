@@ -14,4 +14,5 @@ cpu stats needs sysstat
 *  renamePre : Add prefix to all files in current folder  
 *  renamePos : Add postfix to all files in current folder  
 *  aircrackKismet : Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist  
+kismet files in ~/kismet  
  
