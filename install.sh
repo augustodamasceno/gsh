@@ -5,3 +5,4 @@ cat showGitBranch.cmd  >> ~/.bashrc
 cat markhere.cmd >> ~/.bashrc
 cat toptop.cmd >> ~/.bashrc
 cat aircrackKismet.cmd >> ~/.bashrc
+cat alias_getip.cmd >> ~/.bashrc
