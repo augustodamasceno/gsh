@@ -1,6 +1,9 @@
 #!/bin/bash
 # Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist.
 
+# USAGE
+# airkiss wordlist-file
+
 alias_airkiss()
 {
 	echo 'Running:'

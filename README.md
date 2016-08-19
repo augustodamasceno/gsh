@@ -15,4 +15,6 @@ cpu stats needs sysstat
 *  renamePos : Add postfix to all files in current folder  
 *  aircrackKismet : Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist  
 kismet files in ~/kismet  
+*  getip : Find IP of a machine from MAC-ADDRESS  
+ 
  
