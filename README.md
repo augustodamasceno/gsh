@@ -15,6 +15,8 @@ kismet files in ~/kismet
 USAGE: airkiss WORDLIST  
 *  getip : Find IP of a machine from the lan base IP and MAC-ADDRESS  
 USAGE: getip BASE-IP MAC-ADDRESS  
+* namekill : Kill all process with the name  
+USAGE: namekill name-of-process  
   
 ## Scripts  
   
