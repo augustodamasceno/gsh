@@ -8,4 +8,5 @@ cat cmd/toptop.cmd >> ~/.bashrc
 cat cmd/airkiss.cmd >> ~/.bashrc
 cat cmd/getip.cmd >> ~/.bashrc
 cat cmd/namekill.cmd >> ~/.bashrc
+cat cmd/getnames.cmd >> ~/.bashrc
 echo "#------Scripts4bash-------------" >> ~/.bashrc
