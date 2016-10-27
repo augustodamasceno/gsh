@@ -28,4 +28,5 @@ USAGE: namekill name-of-process
 *  renamePos : Add postfix to all files in current folder  
 *  ip-public : Public IP log and access  
 
-
+## Tips for script with bash  
+* File tips.md
