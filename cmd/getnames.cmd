@@ -8,8 +8,8 @@ alias_getnames()
 
 	for i in ${ips[@]}
 	do
-		echo "nslookup in IP "$i
-		sudo nslookup $i
+		echo "host in IP "$i
+		sudo host $i
 	done
 }
 alias getnames=alias_getnames
