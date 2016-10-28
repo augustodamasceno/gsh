@@ -44,7 +44,7 @@ fi
 
 ## Tip 6. Get number of columns in terminal  
 ```
-$(seq $(tput cols))
+$(tput cols)
 ```
 
 ## Tip 7. Get n lines above every result with grep  
