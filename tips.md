@@ -68,3 +68,8 @@ grep -Po '(?<=\().*(?=\))'
 ```
 grep -r . -e "the-expression"
 ```
+
+## Tip 11. Tip 10 with types of file in specific (C code in example)  
+```
+grep --include=\*.{c,h} -r . -e "the-expression"
+```
