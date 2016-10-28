@@ -63,3 +63,8 @@ awk '{print $1, $2}'
 ```
 grep -Po '(?<=\().*(?=\))' 
 ```
+
+## Tip 10. Find file with expression inside current directory or subs  
+```
+grep -r . -e "the-expression"
+```
