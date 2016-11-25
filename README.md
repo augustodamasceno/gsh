@@ -19,6 +19,8 @@ USAGE: getip BASE-IP MAC-ADDRESS
 USAGE: getnames BASE-IP  
 * namekill : Kill all process with the name  
 USAGE: namekill name-of-process  
+* qrcode : Generate a qrcode png image file from text on a file  
+USAGE : qrcode file-with-text image-filename  
 
   
 ## Scripts  
