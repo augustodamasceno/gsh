@@ -20,6 +20,7 @@ USAGE: getnames BASE-IP
 * namekill : Kill all process with the name  
 USAGE: namekill name-of-process  
 * qrcode : Generate a qrcode png image file from text on a file  
+Needs qrencode  
 USAGE : qrcode file-with-text image-filename  
 
   
