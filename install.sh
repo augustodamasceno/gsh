@@ -1,6 +1,6 @@
 #!/bin/bash
 
-inst=$(cat .bashrc | grep Scripts4bash | wc -l)
+inst=$(cat ~/.bashrc | grep Scripts4bash | wc -l)
 if [ "$inst" -eq "0" ]
 then
 	echo "#------Scripts4bash-------------" >> ~/.bashrc
