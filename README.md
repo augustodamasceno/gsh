@@ -30,7 +30,9 @@ USAGE : qrcode file-with-text image-filename
 *  renamePre : Add prefix to all files in current folder  
 *  renamePos : Add postfix to all files in current folder  
 *  ip-public : Public IP log and access  
-*  bye-mysql : Complete mysql remove
+*  bye-mysql : Complete mysql remove  
+*  renaming.sh : Rename all files with a pattern, need to be configured first!!
+
 
 ## Tips for script with bash  
 * File tips.md
