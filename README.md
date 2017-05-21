@@ -36,7 +36,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 
 
 ### Tips for script with bash  
-* File tips.md
+* File [tips.md](https://github.com/augustomatheuss/scripts4bash/blob/master/tips.md)
 
 ### Software Reference  
 
