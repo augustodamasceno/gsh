@@ -3,6 +3,8 @@
 # Public IP log
 # Run this script inside a synchronized 
 #   folder to access the public ip info anywhere.
+#
+# See https://github.com/kennethreitz/httpbin
 
 if (test -e ip-public.txt)
 then
