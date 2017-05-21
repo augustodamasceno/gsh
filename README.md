@@ -1,28 +1,30 @@
 ## Scripts for bash.  
-### See https://www.gnu.org/software/bash/  
+ 
+### This project is a collection of bash scripts, some scripts you can install and use with an alias.    
   
-## Run install.sh to add all alias scripts from .cmd commands in cmd/.    
+### What is an alias? (From:https://wiki.archlinux.org/index.php/Bash)
+> Alias is a command, which enables a replacement of a word with another string. It is often used for abbreviating a system command, or for adding default arguments to a regularly used command.
+Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (which affect all users) belong in /etc/bash.bashrc. 
   
-## Alias Scripts  
-*  cd : List directory contents when cd command is used.  
-*  markhere : Simple mark, LINE.  
-*  showGitBranch : Show the git branch when inside of a git repository,  
-for Fedora comment the line 1 (.cmd) and uncomment 3 and 4.  
-*  toptop : Display Linux processes by resources (the top 3)  
-cpu stats needs sysstat  
-*  airkiss : Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist  
-kismet files in ~/kismet  
-USAGE: airkiss WORDLIST  
-*  getip : Find IP of a machine from the lan base IP and MAC-ADDRESS  
-USAGE: getip BASE-IP MAC-ADDRESS  
-* getnames : Find names of hosts from the lan base IP  
-USAGE: getnames BASE-IP  
-* namekill : Kill all process with the name  
-USAGE: namekill name-of-process  
-* qrcode : Generate a qrcode png image file from text on a file  
-Needs qrencode  
-USAGE : qrcode file-with-text image-filename  
-
+## Run install.sh to add all alias scripts from .cmd commands in cmd/    
+  
+| Alias Script | Description  |    
+| --- |  -- |  
+| cd | List directory contents when cd command is used. |  
+| markhere | Simple mark, LINE. |  
+| showGitBranch | Show the git branch when inside of a git repository, for Fedora comment the line 1 (.cmd) and uncomment 3 and 4. |  
+| toptop | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
+| airkiss | Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist (in ~/kismet) |  
+| airkiss USAGE | airkiss WORDLIST |  
+| getip | Find IP of a machine from the lan base IP and MAC-ADDRESS |  
+| getip USAGE | getip BASE-IP MAC-ADDRESS |  
+| getnames | Find names of hosts from the lan base IP |  
+| getnames USAGE | getnames BASE-IP |  
+| namekill | Kill all process with the name |  
+| namekill USAGE | namekill name-of-process |  
+| qrcode | Generate a qrcode png image file from text on a file |  
+| Needs qrencode |  
+| USAGE | qrcode file-with-text image-filename |  
   
 ## Scripts  
   
@@ -36,3 +38,9 @@ USAGE : qrcode file-with-text image-filename
 
 ## Tips for script with bash  
 * File tips.md
+
+### Software Reference  
+
+* https://www.gnu.org/software/bash/  
+* https://github.com/kennethreitz/httpbin
+* 
