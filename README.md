@@ -6,7 +6,7 @@
 > Alias is a command, which enables a replacement of a word with another string. It is often used for abbreviating a system command, or for adding default arguments to a regularly used command.
 Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (which affect all users) belong in /etc/bash.bashrc. 
   
-## Run install.sh to add all alias scripts from .cmd commands in cmd/    
+### Run install.sh to add all alias scripts from .cmd commands in cmd/    
   
 | Alias Script | Description  |    
 | --- |  -- |  
@@ -26,21 +26,20 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | Needs qrencode |  
 | USAGE | qrcode file-with-text image-filename |  
   
-## Scripts  
-  
-*  monitor : Visual monitoring the system (users, cpu and mem)  
-*  renamePre : Add prefix to all files in current folder  
-*  renamePos : Add postfix to all files in current folder  
-*  ip-public : Public IP log and access  
-*  bye-mysql : Complete mysql remove  
-*  renaming.sh : Rename all files with a pattern, need to be configured first!!
+| Script | Description |  
+| -- | -- |  
+| monitor : Visual monitoring the system (users, cpu and mem) |   
+| renamePre : Add prefix to all files in current folder |  
+| renamePos : Add postfix to all files in current folder |  
+| ip-public : Public IP log and access |   
+| bye-mysql : Complete mysql remove |  
+| renaming.sh : Rename all files with a pattern, need to be configured first!! |  
 
 
-## Tips for script with bash  
+### Tips for script with bash  
 * File tips.md
 
 ### Software Reference  
 
 * https://www.gnu.org/software/bash/  
 * https://github.com/kennethreitz/httpbin
-* 
