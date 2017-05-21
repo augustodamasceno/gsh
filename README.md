@@ -27,12 +27,12 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
   
 | Script | Description |  
 | -- | -- |  
-| monitor : Visual monitoring the system (users, cpu and mem) |   
-| renamePre : Add prefix to all files in current folder |  
-| renamePos : Add postfix to all files in current folder |  
-| ip-public : Public IP log and access |   
-| bye-mysql : Complete mysql remove |  
-| renaming.sh : Rename all files with a pattern, need to be configured first!! |  
+| monitor | Visual monitoring the system (users, cpu and mem) |   
+| renamePre | Add prefix to all files in current folder |  
+| renamePos | Add postfix to all files in current folder |  
+| ip-public | Public IP log and access |   
+| bye-mysql | Complete mysql remove |  
+| renaming.sh | Rename all files with a pattern, need to be configured first!! |  
 
 
 ### Tips for script with bash  
