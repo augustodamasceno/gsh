@@ -14,6 +14,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **markhere** | Simple mark, LINE. |  
 | **showGitBranch** | Show the git branch when inside of a git repository, for Fedora comment the line 1 (.cmd) and uncomment 3 and 4. |  
 | **toptop** | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
+| **dzise** | Get the total size of the current repository |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist (in ~/kismet) |  
 | airkiss USAGE | airkiss WORDLIST |  
 | **getip** | Find IP of a machine from the lan base IP and MAC-ADDRESS |  

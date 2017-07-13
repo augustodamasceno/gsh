@@ -13,6 +13,7 @@ then
 	cat cmd/namekill.cmd >> ~/.bashrc
 	cat cmd/getnames.cmd >> ~/.bashrc
 	cat cmd/qrcode.cmd >> ~/.bashrc
+	cat cmd/dsize.cmd >> ~/.bashrc
 	echo "#------Scripts4bash-------------" >> ~/.bashrc
 else
 	echo "Scripts4bash already installed. Remove previous commands first."
