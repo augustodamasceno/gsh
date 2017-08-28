@@ -25,7 +25,9 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | namekill USAGE | namekill name-of-process |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | qrcode USAGE | qrcode file-with-text image-filename |  
-  
+| **apts** | Short names to APT commands |  
+| apts USAGE | aptu for update, aptup for upgrade, apti for install and apts for search with aptitude |  
+   
 | Script | Description |  
 | -- | -- |  
 | **monitor** | Visual monitoring the system (users, cpu and mem) |   
@@ -34,6 +36,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **ip-public** | Public IP log and access |   
 | **bye-mysql** | Complete mysql remove |  
 | **renaming.sh** | Rename all files with a pattern, need to be configured first!! |  
+
 
 
 ### Tips for script with bash  
