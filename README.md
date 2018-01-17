@@ -27,6 +27,9 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | qrcode USAGE | qrcode file-with-text image-filename |  
 | **apts** | Short names to APT commands |  
 | apts USAGE | aptu for update, aptup for upgrade, apti for install and apts for search with aptitude |  
+| **memc** | Use memcheck from valgrind to search memory leaks |  
+| memc USAGE | memc ./YOUR-PROGRAM |  
+
    
 | Script | Description |  
 | -- | -- |  
@@ -49,4 +52,6 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 * http://www.aircrack-ng.org/  
 * https://nmap.org/  
 * https://fukuchi.org/works/qrencode/  
-* https://dev.mysql.com/
+* https://dev.mysql.com/  
+* http://www.valgrind.org/  
+
