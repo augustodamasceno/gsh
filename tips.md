@@ -73,3 +73,10 @@ grep -r . -e "the-expression"
 ```
 grep --include=\*.{c,h} -r . -e "the-expression"
 ```
+
+## Tip 12. See all users  
+```
+awk -F':' '{ print $1}' /etc/passwd
+```
+
+
