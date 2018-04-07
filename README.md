@@ -11,6 +11,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | Alias Script | Description  |    
 | --- |  -- |  
 | **cd** | List directory contents when cd command is used. |  
+| **rm** | Use shred and then rm. |    
 | **markhere** | Simple mark, LINE. |  
 | **showGitBranch** | Show the git branch when inside of a git repository, for Fedora comment the line 1 (.cmd) and uncomment 3 and 4. |  
 | **toptop** | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
