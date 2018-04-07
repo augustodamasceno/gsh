@@ -1,4 +1,4 @@
-alias_cd()
+alias_rm()
 {
 	shred $1
 	rm $1
