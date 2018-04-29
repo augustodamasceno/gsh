@@ -14,6 +14,7 @@ then
 	cat cmd/getnames.cmd >> ~/.bashrc
 	cat cmd/qrcode.cmd >> ~/.bashrc
 	cat cmd/dsize.cmd >> ~/.bashrc
+	cat cmd/allusers.cmd >> ~/.bashrc
 	echo "#------Scripts4bash-------------" >> ~/.bashrc
 else
 	echo "Scripts4bash already installed. Remove previous commands first."
