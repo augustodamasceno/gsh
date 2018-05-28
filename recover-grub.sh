@@ -10,6 +10,9 @@
 #		./recover-grub.sh e
 ## 
 
+## Testing the script, force exit.
+exit 1
+
 if [ $# -eq 0 ]
   then
 	echo "Use \"l\" for legacy and \"e\" for uefi."
@@ -46,7 +49,7 @@ if [ $1 == "e"  ]
 then
 	echo -n "Uefi partition: "
 	read uefip
-	mount uefip $bootp"/efi"
+	mount uefip $mountp"/boot/efi"
 fi
 echo -n "Boot partition: "
 read bootp
