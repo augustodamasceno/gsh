@@ -39,6 +39,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | Script | Description |  
 | -- | -- |  
 | **monitor** | Visual monitoring the system (users, cpu and mem) |   
+| **recover-grub** | Recover grub partition from live-cd |   
 | **renamePre** | Add prefix to all files in current folder |  
 | **renamePos** | Add postfix to all files in current folder |  
 | **ip-public** | Public IP log and access |   
