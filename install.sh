@@ -11,6 +11,7 @@ then
 	cat cmd/airkiss.cmd >> ~/.bashrc
 	cat cmd/getip.cmd >> ~/.bashrc
 	cat cmd/namekill.cmd >> ~/.bashrc
+	cat cmd/ikill.cmd >> ~/.bashrc
 	cat cmd/getnames.cmd >> ~/.bashrc
 	cat cmd/qrcode.cmd >> ~/.bashrc
 	cat cmd/dsize.cmd >> ~/.bashrc
