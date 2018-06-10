@@ -17,6 +17,11 @@ then
 	cat cmd/dsize.cmd >> ~/.bashrc
 	cat cmd/allusers.cmd >> ~/.bashrc
 	cat cmd/psname.cmd >> ~/.bashrc
+	cat cmd/gpgenc.cmd >> ~/.bashrc
+	cat cmd/gpgdec.cmd >> ~/.bashrc
+	echo "clear" >> ~/.bashrc
+	echo "echo \"Follow the white rabbit.\"">> ~/.bashrc
+	echo "echo \"\"">> ~/.bashrc
 	echo "#------Scripts4bash-------------" >> ~/.bashrc
 else
 	echo "Scripts4bash already installed. Remove previous commands first."

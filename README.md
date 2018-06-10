@@ -34,6 +34,11 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | apts USAGE | aptu for update, aptup for upgrade, apti for install and apts for search with aptitude |  
 | **memc** | Use memcheck from valgrind to search memory leaks |  
 | memc USAGE | memc ./YOUR-PROGRAM |  
+| **gpgenc** | encrypt file whith gnupg |  
+| gpgecn USAGE | gpgenc KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME |  
+| **gpgdec** | decrypt file whitih gnupg |  
+| gpgdec USAGE | gpgdec KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME |  
+
 
 
 | Script | Description |  
