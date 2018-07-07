@@ -28,6 +28,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | ikill USAGE | ikill name-of-process |  
 | **psname** | Show a process with a string in name, without sensitive case. |  
 | psname USAGE | psname name-of-process |  
+| **psusers** | Show all users with processes running |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | qrcode USAGE | qrcode file-with-text image-filename |  
 | **apts** | Short names to APT commands |  
