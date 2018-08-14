@@ -43,7 +43,8 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | venv-new USAGE | venv-new virtualenv-name |  
 | **venv.cmd** | Source for a virtualenv in ~/.virtualenv/ |  
 | venv USAGE | venv virtualenv-name |  
-
+| **infile.cmd** | Print all lines in order in a file or directory with a expression (insensitive matching) |  
+| infile USAGE | infile expression file-or-directory |  
 
 
 | Script | Description |  
