@@ -39,6 +39,10 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | gpgecn USAGE | gpgenc KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME |  
 | **gpgdec** | decrypt file whitih gnupg |  
 | gpgdec USAGE | gpgdec KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME |  
+| **venv-new.cmd** | Create a new virtualenv with python 2.7 in directory ~/virtualenv/virtualenv-name |  
+| venv-new USAGE | venv-new virtualenv-name |  
+| **venv.cmd** | Source for a virtualenv in ~/.virtualenv/ |  
+| venv USAGE | venv virtualenv-name |  
 
 
 
