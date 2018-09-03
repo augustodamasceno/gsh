@@ -65,7 +65,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **renamePos** | Add postfix to all files in current folder |  
 | **ip-public** | Public IP log and access |   
 | **bye-mysql** | Complete mysql remove |  
-| **renaming.sh** | Rename all files with a pattern, need to be configured first!! |   
+| **renaming** | Rename all files with a pattern, need to be configured first!! |   
 
 # Bash programming examples  
 | File | Description |
