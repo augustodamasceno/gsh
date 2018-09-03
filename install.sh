@@ -1,29 +1,42 @@
 #!/bin/bash
 
+s4bash_alias()
+{
+	echo "Installing scripts4bash alias scripts"
+	echo "#-----Scripts4bash-----.begin-----#" >> ~/.bashrc
+	cat alias/*.cmd >> ~/.bashrc 
+	echo "PATH=$PATH:$HOME/.s4bash" >> ~/.bashrc 
+	echo "#-----Scripts4bash-----.end-------#" >> ~/.bashrc
+}
+
+s4bash_scripts()
+{
+	echo "Installing scripts4bash scripts"
+	if [ ! -d $HOME"/.s4bash" ]
+	then
+		mkdir ~/.s4bash
+	fi
+	cp scripts/* ~/.s4bash/
+	rm ~/.s4bash/README.md
+}
+
 inst=$(cat ~/.bashrc | grep Scripts4bash | wc -l)
 if [ "$inst" -eq "0" ]
 then
-	echo "#------Scripts4bash-------------" >> ~/.bashrc
-	cat cmd/cd.cmd >> ~/.bashrc
-	cat cmd/showGitBranch.cmd  >> ~/.bashrc
-	cat cmd/markhere.cmd >> ~/.bashrc
-	cat cmd/toptop.cmd >> ~/.bashrc
-	cat cmd/airkiss.cmd >> ~/.bashrc
-	cat cmd/getip.cmd >> ~/.bashrc
-	cat cmd/namekill.cmd >> ~/.bashrc
-	cat cmd/ikill.cmd >> ~/.bashrc
-	cat cmd/getnames.cmd >> ~/.bashrc
-	cat cmd/qrcode.cmd >> ~/.bashrc
-	cat cmd/dsize.cmd >> ~/.bashrc
-	cat cmd/allusers.cmd >> ~/.bashrc
-	cat cmd/psname.cmd >> ~/.bashrc
-	cat cmd/gpgenc.cmd >> ~/.bashrc
-	cat cmd/gpgdec.cmd >> ~/.bashrc
-	echo "clear" >> ~/.bashrc
-	echo "echo \"Follow the white rabbit.\"">> ~/.bashrc
-	echo "echo \"\"">> ~/.bashrc
-	echo "#------Scripts4bash-------------" >> ~/.bashrc
+	s4bash_alias
+	s4bash_scripts
 else
-	echo "Scripts4bash already installed. Remove previous commands first."
-fi 
+	echo -n "Scripts4bash already installed. Do you wish to remove and install the new version? (Y/n). "
+	read ok  
+	if [ "$ok" = "Y" ]; then ok="y";fi  
+	if [ "$ok" = "y" ]  
+	then
+		echo "Running remove.sh"
+		bash remove.sh
+		s4bash_alias		
+		s4bash_scripts
+	else
+		echo "Nothing done."
+	fi
+fi
 

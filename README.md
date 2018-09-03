@@ -1,13 +1,23 @@
-## Scripts for bash.  
+# Scripts for bash.   
  
-### This project is a collection of bash scripts, some scripts you can install and use with an alias.    
-  
-### What is an alias? (From:https://wiki.archlinux.org/index.php/Bash)
+## This project is a collection of bash scripts and bash programming examples.  
+ 
+## Instalation  
+*	Add all alias scripts in the individual per-interactive-shell startup file (~/.bashrc)
+*	Add all scripts in the directory ~/.s4bash and add this directory to the PATH variable
+```
+$ git clone https://github.com/augustomatheuss/scripts4bash.git 
+$ cd scripts4bash 
+$ bash install.sh    
+```
+ 
+### [What is an alias?] (From:https://wiki.archlinux.org/index.php/Bash)  
 > Alias is a command, which enables a replacement of a word with another string. It is often used for abbreviating a system command, or for adding default arguments to a regularly used command.
-Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (which affect all users) belong in /etc/bash.bashrc. 
+Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (which affect all users) belong in /etc/bash.bashrc.  
+
+### [The PATH variable] (https://www.linux.com/answers/what-purpose-path-variable)  
   
-### Run install.sh to add all alias scripts from .cmd commands in cmd/    
-  
+## Alias scripts  
 | Alias Script | Description  |    
 | --- |  -- |  
 | **cd** | List directory contents when cd command is used. |  
@@ -46,7 +56,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **infile.cmd** | Print all lines in order in a file or directory with a expression (insensitive matching) |  
 | infile USAGE | infile expression file-or-directory |  
 
-
+## Scripts  
 | Script | Description |  
 | -- | -- |  
 | **monitor** | Visual monitoring the system (users, cpu and mem) |   
@@ -55,20 +65,28 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **renamePos** | Add postfix to all files in current folder |  
 | **ip-public** | Public IP log and access |   
 | **bye-mysql** | Complete mysql remove |  
-| **renaming.sh** | Rename all files with a pattern, need to be configured first!! |  
+| **renaming.sh** | Rename all files with a pattern, need to be configured first!! |   
 
-
-
-### Tips for script with bash  
-* File [tips.md](https://github.com/augustomatheuss/scripts4bash/blob/master/tips.md)
+# Bash programming examples  
+| File | Description |
+| -- | -- |  
+| **examples/run-by-name.md**  | Install and run a command just by the name |  
+| **examples/tests.md**  | Tests Command |  
+| **examples/search.md** | Search files and expressions |  
+| **examples/ask-the-user.md**  | Interactions with the user |  
+| **examples/awk.md**  | Awk command |  
+| **examples/users.md**  | Users, login and auth examples |  
+| **examples/general.md**  | General examples |  
+| **examples/wait.md**  | Wait and sleep examples |   
 
 ### Software Reference  
 
 * https://www.gnu.org/software/bash/  
-* https://github.com/kennethreitz/httpbin
+* https://wiki.archlinux.org/index.php/Bash)  
+* https://www.linux.com/answers/what-purpose-path-variable  
+* https://github.com/kennethreitz/httpbin  
 * http://www.aircrack-ng.org/  
 * https://nmap.org/  
 * https://fukuchi.org/works/qrencode/  
 * https://dev.mysql.com/  
 * http://www.valgrind.org/  
-
