@@ -11,11 +11,11 @@ $ cd scripts4bash
 $ bash install.sh    
 ```
  
-### [What is an alias?] (From:https://wiki.archlinux.org/index.php/Bash)  
+### [What is an alias?](https://wiki.archlinux.org/index.php/Bash)  
 > Alias is a command, which enables a replacement of a word with another string. It is often used for abbreviating a system command, or for adding default arguments to a regularly used command.
 Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (which affect all users) belong in /etc/bash.bashrc.  
 
-### [The PATH variable] (https://www.linux.com/answers/what-purpose-path-variable)  
+### [The PATH variable](https://www.linux.com/answers/what-purpose-path-variable)  
   
 ## Alias scripts  
 | Alias Script | Description  |    
