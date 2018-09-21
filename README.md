@@ -1,6 +1,6 @@
 # Scripts for bash.   
  
-## This project is a collection of bash scripts and bash programming examples.  
+## This project is a collection of bash scripts and bash programming examples.   
  
 ## Instalation  
 *	Add all alias scripts in the individual per-interactive-shell startup file (~/.bashrc)
@@ -28,8 +28,8 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **allusers** | List all users |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist (in ~/kismet) |  
 | airkiss USAGE | airkiss WORDLIST |  
-| **getip** | Find IP of a machine from the lan base IP and MAC-ADDRESS |  
-| getip USAGE | getip BASE-IP MAC-ADDRESS |  
+| **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
+| getip USAGE | getip NETWORK-IP MAC-ADDRESS |  
 | **getnames** | Find names of hosts from the lan base IP |  
 | getnames USAGE | getnames BASE-IP |  
 | **namekill** | Kill all process with the name |  
@@ -78,6 +78,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **examples/users.md**  | Users, login and auth examples |  
 | **examples/general.md**  | General examples |  
 | **examples/wait.md**  | Wait and sleep examples |   
+| **examples/arithmetic.md**  | Arithmetic examples |   
 
 ### Software Reference  
 
@@ -90,3 +91,5 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 * https://fukuchi.org/works/qrencode/  
 * https://dev.mysql.com/  
 * http://www.valgrind.org/  
+* https://www.gnu.org/software/bc/  
+ 

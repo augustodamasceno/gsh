@@ -18,6 +18,7 @@ s4bash_scripts()
 	fi
 	cp scripts/* ~/.s4bash/
 	rm ~/.s4bash/README.md
+	chmod +x -R ~/.s4bash/
 }
 
 inst=$(cat ~/.bashrc | grep Scripts4bash | wc -l)
