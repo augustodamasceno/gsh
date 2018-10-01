@@ -5,7 +5,8 @@ s4bash_alias()
 	echo "Installing scripts4bash alias scripts"
 	echo "#-----Scripts4bash-----.begin-----#" >> ~/.bashrc
 	cat alias/*.cmd >> ~/.bashrc 
-	echo "PATH=$PATH:$HOME/.s4bash" >> ~/.bashrc 
+	echo "PATH=$PATH:$HOME/.s4bash" >> ~/.bashrc
+	echo "HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc 
 	echo "#-----Scripts4bash-----.end-------#" >> ~/.bashrc
 }
 

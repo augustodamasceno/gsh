@@ -5,6 +5,7 @@
 ## Instalation  
 *	Add all alias scripts in the individual per-interactive-shell startup file (~/.bashrc)
 *	Add all scripts in the directory ~/.s4bash and add this directory to the PATH variable
+*	Modify the HISTTIMEFORMAT variable to display date and time in the history command
 ```
 $ git clone https://github.com/augustomatheuss/scripts4bash.git 
 $ cd scripts4bash 
