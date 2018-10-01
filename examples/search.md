@@ -32,6 +32,6 @@ grep -A n "the-pattern"
 
 ## Example 7. Get n lines arround (context) every result in file search  
 ```
-grep -B n "the-pattern"  
+grep -C n "the-pattern"  
 ```
 
