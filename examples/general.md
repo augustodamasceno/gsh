@@ -11,7 +11,7 @@ $(tput cols)
 /sys/class/backlight/intel_backlight/brightness
 ```  
 
-## Example 3. Verifying a Debian iso download
+## Example 3. Verifying authenticity of a Debian iso
 * Download the checksum file and the signed file and try to verify with gpg
 ```
 gpg --verify SHA512SUMS.sign.txt SHA512SUMS.txt
