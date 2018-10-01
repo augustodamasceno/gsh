@@ -33,4 +33,9 @@ gpg --verify SHA512SUMS.sign.txt SHA512SUMS.txt
 * Verify the iso checksum (for sha256 and sha1 algorithm, just change the number in the command)
 ```
 sha512sum -c SHA512SUMS.txt
+```  
+
+## Example 4. Take a screenshot (run the command and click in the target screen)  
+```
+xwd | xwdtopnm | pnmtopng > capture.png
 ```

@@ -94,4 +94,5 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 * https://dev.mysql.com/  
 * http://www.valgrind.org/  
 * https://www.gnu.org/software/bc/  
-* https://www.debian.org/CD/verify   
+* https://www.debian.org/CD/verify  
+* https://wiki.debian.org/ScreenShots   
