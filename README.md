@@ -52,11 +52,12 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | gpgdec USAGE | gpgdec KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME |  
 | **venv-new.cmd** | Create a new virtualenv with python 2.7 in directory ~/virtualenv/virtualenv-name |  
 | venv-new USAGE | venv-new virtualenv-name |  
-| **venv.cmd** | Source for a virtualenv in ~/.virtualenv/ |  
-| venv USAGE | venv virtualenv-name |  
+| **venv.cmd** | source for a virtualenv in ~/.virtualenv/ |  
+| venv usage | venv virtualenv-name |  
 | **infile.cmd** | Print all lines in order in a file or directory with a expression (insensitive matching) |  
 | infile USAGE | infile expression file-or-directory |   
 | **psh.cmd** | ps aux command with human readable sizes |  
+| **sshot.cmd** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 
 ## Scripts  
 | Script | Description |  
