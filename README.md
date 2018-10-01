@@ -58,6 +58,7 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | infile USAGE | infile expression file-or-directory |   
 | **psh.cmd** | ps aux command with human readable sizes |  
 | **sshot.cmd** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
+| sshot USAGE  | Run the command sshot and click in the target screen |  
 
 ## Scripts  
 | Script | Description |  
