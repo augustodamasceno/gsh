@@ -10,3 +10,7 @@ awk '{print $5}'
 awk '{print $1, $2}'
 ```
 
+## Example 3. Get the line 16 from a file my-file.txt.  
+```
+awk NR==16 my-file.txt
+```
