@@ -33,5 +33,11 @@ grep -A n "the-pattern"
 ## Example 7. Get n lines arround (context) every result in file search  
 ```
 grep -C n "the-pattern"  
+```  
+
+## Example 8. Search all files inside a directory and shred them.  
+## In this example all regular files with ".jp" in the name will be shred 5 times and rewritten with zeros (verbose mode).  
+```
+sudo find `pwd` -type f -name "*.jp*" | xargs sudo shred -n 5 -z -v
 ```
 
