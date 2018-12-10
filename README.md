@@ -61,6 +61,11 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | sshot USAGE  | Run the command sshot and click in the target screen |  
 | **randstr.cmd** | Get a random string with n characters |  
 | randstr USAGE  | randstr number-of-characters |  
+| **githubclone.cmd** | Clone a personal github repository |  
+| githubclone USAGE  | githubclone name-of-repository |  
+| **gitbitclone.cmd** | Clone a personal bitbucket repository |  
+| gitbitclone USAGE  | gitbitclone name-of-repository |   
+
 
 ## Scripts  
 | Script | Description |  
