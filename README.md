@@ -50,25 +50,24 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | gpgecn USAGE | gpgenc KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME |  
 | **gpgdec** | decrypt file whitih gnupg |  
 | gpgdec USAGE | gpgdec KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME |  
-| **venv-new.cmd** | Create a new virtualenv with python 2.7 in directory ~/virtualenv/virtualenv-name |  
+| **venv-new** | Create a new virtualenv with python 2.7 in directory ~/virtualenv/virtualenv-name |  
 | venv-new USAGE | venv-new virtualenv-name |  
-| **venv.cmd** | source for a virtualenv in ~/.virtualenv/ |  
+| **venv** | source for a virtualenv in ~/.virtualenv/ |  
 | venv usage | venv virtualenv-name |  
-| **infile.cmd** | Print all lines in order in a file or directory with a expression (insensitive matching) |  
+| **infile** | Print all lines in order in a file or directory with a expression (insensitive matching) |  
 | infile USAGE | infile expression file-or-directory |   
-| **psh.cmd** | ps aux command with human readable sizes |  
-| **sshot.cmd** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
+| **psh** | ps aux command with human readable sizes |  
+| **sshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | sshot USAGE  | Run the command sshot and click in the target screen |  
-| **randstr.cmd** | Get a random string with n characters |  
+| **randstr** | Get a random string with n characters |  
 | randstr USAGE  | randstr number-of-characters |  
-| **githubclone.cmd** | Clone a personal github repository |  
+| **githubclone** | Clone a personal github repository |  
 | githubclone USAGE  | githubclone name-of-repository |  
-| **gitbitclone.cmd** | Clone a personal bitbucket repository |  
+| **gitbitclone** | Clone a personal bitbucket repository |  
 | gitbitclone USAGE  | gitbitclone name-of-repository |   
-| **allimages.cmd** | Get all images on a website |  
+| **allimages** | Get all images on a website |  
 | allimages USAGE  | allimages website |   
-| **locks.cmd** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.s4bash/locks.png |  
-| locks USAGE  | locks |   
+| **locks** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.s4bash/locks.png |  
 
 
 ## Scripts  
