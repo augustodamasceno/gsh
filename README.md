@@ -80,7 +80,8 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | **renamePos** | Add postfix to all files in current folder |  
 | **ip-public** | Public IP log and access |   
 | **bye-mysql** | Complete mysql remove |  
-| **renaming** | Rename all files with a pattern, need to be configured first!! |   
+| **renaming** | Rename all files with a pattern, need to be configured first!! |  
+| **locks** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.s4bash/locks.png |   
 
 # Bash programming examples  
 | File | Description |
