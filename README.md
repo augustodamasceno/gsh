@@ -65,6 +65,10 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | githubclone USAGE  | githubclone name-of-repository |  
 | **gitbitclone.cmd** | Clone a personal bitbucket repository |  
 | gitbitclone USAGE  | gitbitclone name-of-repository |   
+| **allimages.cmd** | Get all images on a website |  
+| allimages USAGE  | allimages website |   
+| **locks.cmd** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.s4bash/locks.png |  
+| locks USAGE  | locks |   
 
 
 ## Scripts  
