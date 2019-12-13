@@ -1,44 +1,25 @@
 #!/bin/bash
 
-s4bash_alias()
-{
-	echo "Installing scripts4bash alias scripts"
-	echo "#-----Scripts4bash-----.begin-----#" >> ~/.bashrc
-	cat alias/*.cmd >> ~/.bashrc 
-	echo "PATH=$PATH:$HOME/.s4bash" >> ~/.bashrc
-	echo "HISTTIMEFORMAT=\"%d/%m/%y %T \"" >> ~/.bashrc 
-	echo "#-----Scripts4bash-----.end-------#" >> ~/.bashrc
-}
 
-s4bash_scripts()
-{
-	echo "Installing scripts4bash scripts"
-	if [ ! -d $HOME"/.s4bash" ]
-	then
-		mkdir ~/.s4bash
-	fi
-	cp scripts/* ~/.s4bash/
-	rm ~/.s4bash/README.md
-	chmod +x -R ~/.s4bash/
-}
+echo "Installing gsh scripts"
 
-inst=$(cat ~/.bashrc | grep Scripts4bash | wc -l)
-if [ "$inst" -eq "0" ]
+# Create ~/.gsh if the folder does not exist.
+if [ ! -d $HOME"/.gsh" ]
 then
-	s4bash_alias
-	s4bash_scripts
-else
-	echo -n "Scripts4bash already installed. Do you wish to remove and install the new version? (Y/n). "
-	read ok  
-	if [ "$ok" = "Y" ]; then ok="y";fi  
-	if [ "$ok" = "y" ]  
-	then
-		echo "Running remove.sh"
-		bash remove.sh
-		s4bash_alias		
-		s4bash_scripts
-	else
-		echo "Nothing done."
-	fi
+	mkdir ~/.gsh
+fi
+
+# Copy all gsh scripts to the local instalation with execution permission.
+cp scripts/* ~/.gsh/
+chmod +x -R ~/.gsh/
+
+# Append ~/.gsh to the PATH variable in bash and zsh rcfiles.
+if [ -d $HOME"/.bashrc" ]
+then
+	echo "PATH=$PATH:$HOME/.gsh" >> ~/.bashrc
+fi
+if [ -d $HOME"/.zshrc" ]
+then
+	echo "PATH=$PATH:$HOME/.gsh" >> ~/.zshrc
 fi
 

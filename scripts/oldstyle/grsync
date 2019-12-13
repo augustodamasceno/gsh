@@ -7,5 +7,5 @@ echo "Syncing "$nfiles" files from "$1" to "$2"."
 echo "Skip based on checksum!"
 
 # Rsync with pv to show the progess.
-rsync -ca $1 $2 | pv -lpes $nfiles
+rsync -cav $1 $2 | pv -lpe -s $nfiles > /dev/null
 

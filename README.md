@@ -1,4 +1,4 @@
-# Scripts for bash.   
+# Gin Shell or GSH   
  
 ## This project is a collection of bash scripts and bash programming examples.   
  
