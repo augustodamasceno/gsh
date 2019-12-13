@@ -69,6 +69,8 @@ Personal aliases are preferably stored in ~/.bashrc, and system-wide aliases (wh
 | allimages USAGE  | allimages website |   
 | **locks** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.s4bash/locks.png |  
 | **myip** | Get the public IP |  
+| **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   
+
 
 ## Scripts  
 | Script | Description |  

@@ -1,0 +1,11 @@
+#!/bin/bash
+
+
+# Print a message to the user about the number of files and the rsync options.
+nfiles=$(find $1 -type f | wc -l)
+echo "Syncing "$nfiles" files from "$1" to "$2"." 
+echo "Skip based on checksum!"
+
+# Rsync with pv to show the progess.
+rsync -ca $1 $2 | pv -lpes $nfiles
+
