@@ -45,6 +45,7 @@ $ bash install.sh
 | **pubiplog** | Public IP log and access |   
 | **gmv** | Rename all files with a pattern |    
   
+# [Bash programming examples] (https://github.com/augustomatheuss/gsh/programming-examples) 
 
 ### Software Reference  
 
