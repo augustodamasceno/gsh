@@ -12,6 +12,11 @@ $ git clone https://github.com/augustomatheuss/gsh.git
 $ cd gsh 
 $ bash install.sh    
 ```
+
+## Uninstall
+```
+bash remove.sh
+```
   
 ## Basic Scripts  
 | Script | Description |  
