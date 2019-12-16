@@ -2,7 +2,7 @@
 | File | Description |
 | -- | -- |  
 | [run-by-name](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/run-by-name.md)  | Install and run a command just by the name |  
-| [tests](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/tests.md) | Tests Command |  
+| [tests](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/tests.md) | Tests Commands |  
 | [search](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/search.md)| Search files and expressions |  
 | [ask-the-user](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/ask-the-user.md) | Interactions with the user |  
 | [awk.md](https://github.com/augustomatheuss/scripts4bash/blob/master/examples/awk.md) | Awk command |  
