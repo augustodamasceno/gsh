@@ -1,25 +1,25 @@
 #!/bin/bash
 
-# Backup previous ~/.bashrc-backup file
-if (test -e ~/.bashrc-backup)
-    then
-        mv ~/.bashrc-backup ~/.bashrc-backup-movein$(date +"%d%h%y_%H-%M-%S")
+
+echo "Removing gsh scripts"
+rm -rf ~/.gsh
+
+
+# Remove apppend command that puts ~/.gsh into the PATH variable in bash and zsh rcfiles.
+if [ -f $HOME"/.bashrc" ]
+then
+	echo -e "Remove append command thats puts "$HOME"/.gsh "
+	echo "into the PATH variable in the bashrc file"
+	grep -v "PATH=$PATH:$HOME/.gsh" ~/.bashrc > gsh-remove-temp
+	cat gsh-remove-temp > ~/.bashrc
+	rm gsh-remove-temp
+fi
+if [ -f $HOME"/.zshrc" ]
+then
+	echo -e "Remove append command thats puts "$HOME"/.gsh "
+	echo "into the PATH variable in the zshrc file"
+	grep -v "PATH=$PATH:$HOME/.gsh" ~/.zshrc > gsh-remove-temp
+	cat gsh-remove-temp > ~/.zshrc
+	rm gsh-remove-temp
 fi
 
-# Create a backup for file ~/.bashrc
-if (test -e ~/.bashrc)
-    then
-        cp ~/.bashrc ~/.bashrc-backup
-fi
-
-# Remove previous alias scripts in the file ~/.bashrc
-nlines=$(cat ~/.bashrc | wc -l)
-blines=$(grep -B $nlines -e Scripts4bash-----.begin ~/.bashrc | wc -l)
-blines=`expr $blines - 1`
-alines=$(grep -A $nlines -e Scripts4bash-----.end ~/.bashrc | wc -l)
-alines=`expr $alines - 1`
-
-cat ~/.bashrc | head -n $blines > s4bash-remove.tmp
-cat ~/.bashrc | tail -n $alines >> s4bash-remove.tmp
-cat s4bash-remove.tmp > ~/.bashrc
-rm s4bash-remove.tmp

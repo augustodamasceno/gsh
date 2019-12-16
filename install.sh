@@ -14,12 +14,14 @@ cp scripts/* ~/.gsh/
 chmod +x -R ~/.gsh/
 
 # Append ~/.gsh to the PATH variable in bash and zsh rcfiles.
-if [ -d $HOME"/.bashrc" ]
+if [ -f $HOME"/.bashrc" ]
 then
+	echo "Appending "$HOME"/.gsh to the PATH variable in the bashrc file"
 	echo "PATH=$PATH:$HOME/.gsh" >> ~/.bashrc
 fi
-if [ -d $HOME"/.zshrc" ]
+if [ -f $HOME"/.zshrc" ]
 then
+	echo "Appending "$HOME"/.gsh to the PATH variable in the zshrc file"
 	echo "PATH=$PATH:$HOME/.gsh" >> ~/.zshrc
 fi
 
