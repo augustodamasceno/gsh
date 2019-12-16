@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script downloads all images in a website.
+#
+#  USAGE
+#    webimages WEBSITE
+##
+
+
+wget -r -A jpeg,jpg,bmp,gif,png $1

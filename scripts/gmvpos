@@ -1,0 +1,32 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script adds a postfix to all files in the current folder.
+#
+#  USAGE
+#    gmvpos POSTFIX
+##
+
+
+post=$1
+if [ ${#1} -gt 0 ]
+then
+	userMsg1='Rename all files in this folder adding the postfix \042'
+	echo -n $userMsg1$post'\042 (y/N) '
+	read ok
+	
+	if [ "$ok" = "Y" ]; then ok="y";fi
+	if [ "$ok" = "y" ]
+	then
+		for i in *
+		do
+			newname=$i$post
+			echo "renaming $i to $newname"
+			mv $i $newname
+		done
+		mv $0$post $0
+	fi
+fi

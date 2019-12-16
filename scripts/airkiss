@@ -1,0 +1,17 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script runs aircrack-ng with the bigger pcapdump file
+#    int the folder ~/kismet and a wordlist
+#
+#  USAGE
+#    airkiss WORDLIST-FILE
+##
+
+
+echo 'Running:'
+echo  'aircrack-ng ~/kismet/'$(ls ~/kismet/ --sort=size | head -n 1)' -w '$1
+aircrack-ng ~/kismet/$(ls ~/kismet/ --sort=size | head -n 1) -w $1

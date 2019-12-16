@@ -1,0 +1,13 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script gets the total size of the current folder, recursively.
+#
+#  USAGE
+#    gdu
+##
+
+du -csbh ./* | tail -n 1 

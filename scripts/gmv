@@ -1,0 +1,56 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script rename all files with a pattern.
+#  
+#  USAGE
+#    gmv FOLDER PATTERN-1 PATTERN-2 CHAR-TO-BE-REPLACED CHAR-TO-REPLACE
+#  EXAMPLE: replace all ":" for "_" in screenshot files in the folder "Pictures"
+#    gmv Pictures/ creenshot : _
+##
+
+
+# Folder
+foldername=$1
+# Filter 1
+filterwith=$2
+# And : char
+filterwith2=$3
+# Change : for _
+renameexpression='s/'$3'/'$4'/'
+
+## Save all files with search required patterns
+find `pwd` | grep $(whoami) | grep $foldername | grep $filterwith | grep $filterwith2 | grep '.png' > myrenamefile
+
+## Print an example
+echo 'The result will be the following'
+echo 'This file'
+echo $(echo \'$(tail -n 1 myrenamefile)\')
+echo 'becomes'
+echo $( echo \'$(tail -n 1 myrenamefile)\' | sed -e $renameexpression)
+
+## Ask if this is what the user want
+echo -n 'Are you sure that you want to continue? (y/N) '
+read ok
+
+## Make the changes
+if [ "$ok" = "Y" ]; then ok="y";fi
+if [ "$ok" = "y" ]
+then
+	it=1
+	for i in $(wc -l myrenamefile){0}
+	do
+		echo $i
+		while [ "$i" -ge "$it" ]
+		do
+			echo 'Renaming file '$it
+			rename $renameexpression "$(tail -n $it myrenamefile | head -n 1)"
+			it=$(($it+1))
+		done
+		break
+	done
+fi
+

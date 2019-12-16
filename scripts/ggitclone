@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script clones a github or bitbucket repository
+#    from the git global user
+#
+#  USAGE
+#	BITBUCKET CLONE
+#    ggitclone -b REPOSITORY-NAME
+#   GITHUB CLONE
+#	 ggitclone -g REPOSITORY-NAME
+##
+
+if [ $1 == "-b" ]
+then
+	git clone git@bitbucket.com:"$(git config user.name)"/"$1".git
+elif [ $1 == "-g" ]
+then
+	git clone git@github.com:"$(git config user.name)"/"$1".git
+else
+	echo "There is no option: "$1" .Nothing Done!"
+fi
+

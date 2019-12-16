@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script show all users in the machine
+#
+#  USAGE
+#    allusers
+##
+
+
+cut -d: -f1 /etc/passwd

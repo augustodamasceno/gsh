@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script loads a python virtual environment 
+#    in the folder ~/.venv
+#
+#  USAGE
+#    genv VENV-NAME
+##
+
+
+source "~/.venv/$1/bin/activate"
+

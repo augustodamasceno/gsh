@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script runs memcheck from valgrind to search for memory leaks.
+#
+#  USAGE
+#    gvalgrind ./THE-PROGRAM
+##
+
+
+
+valgrind --leak-check=full --track-origins=yes $1
+

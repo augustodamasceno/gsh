@@ -1,0 +1,27 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script runs "cd" and "ls -lhat" between horizontal lines.
+#
+#  USAGE
+#    gcd PATH
+##
+
+
+  
+cd $1
+printf "\n"
+for i in $(seq $(tput cols))
+do
+	printf "_";
+done
+printf "\n\n"
+ls -lhat
+for i in $(seq $(tput cols))
+do
+	printf "_";
+done
+printf "\n\n"

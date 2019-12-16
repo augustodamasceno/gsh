@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script takes a screenshot, the output is a png file 
+#    with the time and date.
+#
+#  USAGE
+#    gshot
+##
+
+xwd | xwdtopnm | pnmtopng > screenshot$(date +"%d%h%y_%H-%M-%S").png
+

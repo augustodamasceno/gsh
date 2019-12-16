@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script shows all users with processes running
+#
+#  USAGE
+#    gpsu
+##
+
+
+ps aux | awk '{print $1}' | uniq -u
+

@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script shows the public IP address.
+#
+#  USAGE
+#    pubip    
+##
+
+
+curl http://httpbin.org/ip 

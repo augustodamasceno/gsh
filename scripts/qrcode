@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script generate a qrcode png image file
+#    from text on a file (needs qrencode)
+#
+#  USAGE
+#   qrcode TEXT-FILE IMAGE-OUTPUT-FILENAME 
+##
+
+
+cat $1 | qrencode -o $2 -l M -s 5
+

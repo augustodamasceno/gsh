@@ -1,0 +1,66 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script prints every 'timeSleep' seconds:
+#     Who is logged on and what they are doing
+#     Cpus Stats
+#     Top 3 Cpu Usage
+#     Memory Use
+#     Top 3 Mem Usage
+#  USAGE
+#    USING DEFAULT TIME INTERVAL OF 3 SECONDS
+#    gmonitor  
+#    USING TIME INTERVAL OF 1 SECOND
+#    gmonitor 1
+##
+
+
+printTitle()
+{
+	local name=$1
+	local nMinus=`expr $cols - ${#name}`
+	printf '\033[0;31m'
+	for i in `seq 1 2 $nMinus`
+	do
+		printf '-'
+	done
+	printf $name
+	for i in `seq 2 2 $nMinus`
+	do
+		printf '-'
+	done
+	printf '\033[0m\n'
+}
+
+cpulines=`expr $(cat /proc/cpuinfo | grep processor | wc -l) + 2`
+if [ $# -eq 1 ]
+then
+	timeSleep=$1
+else
+	timeSleep=3
+fi
+while true
+do
+	cols=$(tput cols)
+	clear
+	printTitle BEGIN-MONITOR
+	date
+	printTitle USERS
+	w
+	printTitle CPU
+	mpstat -P ALL | tail -n $cpulines
+	printTitle TOP-CPU-USE
+	ps aux | head -1
+	ps aux | sort -rn -k 3,6 | head -3
+	printTitle MEMORY
+	free -h | head -n 2
+	printTitle TOP-MEMORY-USE
+	ps aux | head -1
+	ps aux | sort -rn -k 4,6 | head -3
+	printTitle END-MONITOR
+	sleep $timeSleep
+done
+

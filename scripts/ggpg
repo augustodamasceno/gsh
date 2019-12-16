@@ -1,0 +1,25 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script encodes and decodes files using gpg software
+#
+#  USAGE
+#	ENCRYPT
+#     ggpg -e KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME
+#   DECRYPT
+#	  ggpg -d KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME
+##
+
+if [ $1 == "-e" ]
+then
+	gpg --recipient $1 --output $3 --encrypt $2
+elif [ $1 == "-d" ]
+then
+	gpg --recipient $1 --output $3 --decrypt $2
+else
+	echo "There is no option: "$1" .Nothing Done!"
+fi
+

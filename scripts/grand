@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script generates a random string with n characters
+#
+#  USAGE
+#    grand NUMBER-OF-CHARACTERS
+##
+
+
+cat /dev/urandom | base64 | head -c $1
+

@@ -1,0 +1,16 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script finds an IP of a machine from 
+#    the network address and the MAC-ADDRESS
+#
+#  USAGE
+#    getip NETWORK-ADDRESS MAC-ADDRESS
+##
+
+
+sudo nmap -sn $1 > pinglan
+cat pinglan | grep -B 2 $2

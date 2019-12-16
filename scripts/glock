@@ -1,0 +1,21 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script locks the screen.
+#  Use the image ~/.gsh/img/locks.png as background image.
+#
+#  USAGE
+#    glock
+##
+
+
+if (test -e ~/.gsh/img/locks.png)  
+then   
+	i3lock -i ~/.gsh/img/locks.png -e -f -I 3  
+else
+	i3lock -c 000000 -e -f -I 3
+fi
+

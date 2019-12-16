@@ -1,0 +1,15 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script runs ps aux with human readable sizes.
+#
+#  USAGE
+#    gps
+##
+
+
+ps aux | numfmt --header --to=iec --field 5,6 --padding 6
+
