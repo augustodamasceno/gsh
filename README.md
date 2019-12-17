@@ -6,7 +6,7 @@
 All scripts are added in the folder .gsh in the home directory, and this directory is  
 appended in the PATH variable (in the bash and zsh rcfiles).
  
-## Instalation  
+## Instalation and Update  
 ```
 $ git clone https://github.com/augustomatheuss/gsh.git 
 $ cd gsh 
