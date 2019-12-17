@@ -1,7 +1,7 @@
 #!/bin/bash
 
 
-# Create ~/.gsh if the folder does not exist.
+# Identify instalation by the folder ~/.gsh existence.
 if [ ! -d $HOME"/.gsh" ]
 then
 	echo "Installing gsh scripts"
@@ -22,7 +22,16 @@ then
 	fi
 else
 	echo "Updating gsh scripts"
-	rm ~/.gsh/*
+	echo "All files in the ~/.gsh folder will be deleted. Proceed? (Y/n)"
+	read ok  
+	if [ "$ok" = "Y" ]; then ok="y";fi  
+	if [ "$ok" = "y" ]  
+	then  
+		echo "GSH updated!"  
+		rm ~/.gsh/*
+	else
+		echo "GSH was not updated."
+	fi  
 fi
 
 # Copy all gsh scripts to the local instalation with execution permission.
