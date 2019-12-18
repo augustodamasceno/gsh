@@ -16,10 +16,10 @@
 
 if [ $1 == "-b" ]
 then
-	git clone git@bitbucket.com:"$(git config user.name)"/"$1".git
+	git clone git@bitbucket.com:"$(git config user.name)"/"$2".git
 elif [ $1 == "-g" ]
 then
-	git clone git@github.com:"$(git config user.name)"/"$1".git
+	git clone git@github.com:"$(git config user.name)"/"$2".git
 else
 	echo "There is no option: "$1" .Nothing Done!"
 fi
