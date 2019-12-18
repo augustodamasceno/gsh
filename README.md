@@ -49,6 +49,7 @@ bash remove.sh
 | **gmvpos** | Add postfix to all files in current folder |  
 | **pubiplog** | Public IP log and access |   
 | **gmv** | Rename all files with a pattern |    
+| **gfree** | Runs free with -wht command |   
 
 ## Security Scripts  
 | Script | Description |  
