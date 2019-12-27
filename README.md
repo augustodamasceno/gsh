@@ -21,10 +21,10 @@ bash remove.sh
 ## Basic Scripts  
 | Script | Description |  
 | -- | -- |  
-| **cdl** | List directory contents when cd command is used. |  
+| **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
 | **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | **webimages** | Get all images on a website |  
-| **glock** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
+| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
 | **pubip** | Get the public IP |    
   
 ## DEV and DEVOPS Scripts  
