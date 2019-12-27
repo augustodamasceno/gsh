@@ -21,7 +21,7 @@ bash remove.sh
 ## Basic Scripts  
 | Script | Description |  
 | -- | -- |  
-| **cgd** | List directory contents when cd command is used. |  
+| **cdl** | List directory contents when cd command is used. |  
 | **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | **webimages** | Get all images on a website |  
 | **glock** | Lock Screen (needs i3lock). For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
