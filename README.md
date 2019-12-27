@@ -50,6 +50,7 @@ bash remove.sh
 | **pubiplog** | Public IP log and access |   
 | **gmv** | Rename all files with a pattern |    
 | **gfree** | Runs free with -wht command |   
+| **gdocker** | Display a list of Docker commands |   
 
 ## Security Scripts  
 | Script | Description |  
