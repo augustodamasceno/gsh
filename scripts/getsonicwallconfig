@@ -1,0 +1,49 @@
+#!/usr/bin/expect -f
+
+##
+# This script is part of the GSH software.
+#
+# Export CLI configuration of a Sonicwall via SSH to a FTP server.
+#
+#	USAGE
+#
+#	./getConfig IP USER PASSWORD FTP-USER FTP-PASSWORD FTP-IP CLI-FILENAME
+
+
+set ip [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+set ftpUser [lindex $argv 3]
+set ftpPassword [lindex $argv 4]
+set ftpIP [lindex $argv 5]
+set ftpFileame [lindex $argv 6]
+
+# SSH login
+eval spawn ssh -o StrictHostKeyChecking=no -oHostKeyAlgorithms=+ssh-dss -oKexAlgorithms=diffie-hellman-group1-sha1 $ip -c 3des-cbc -l $user
+set prompt ":|>|#|\\\$"
+interact -o -nobuffer -re $prompt return
+send $password
+send "\r"
+interact -o -nobuffer -re $prompt return
+send "config terminal\r"
+
+# Send comand and commit.
+interact -o -nobuffer -re $prompt return
+send "export current-config cli ftp ftp://"
+send $ftpUser
+send ":"
+send $ftpPassword
+send "@"
+send $ftpIP
+send "/"
+send $ftpFileame
+send "\r"
+
+# Exit
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+

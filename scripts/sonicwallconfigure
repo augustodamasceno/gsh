@@ -1,0 +1,53 @@
+#!/usr/bin/expect -f
+
+##
+# This script is part of the GSH software.
+#
+# Expect Script to Configure Sonicwall via SSH and CLI  
+#
+#	You must logout from the web interface  
+#	Remember the command commit in the "CLI-FILE" to save the changes  
+#
+# 	Tests With:  
+# 		Firmware 5.9  
+#
+#	USAGE
+#
+#	./sonicwallconfig IP USER PASSWORD CLI-FILE 
+##
+
+set ip [lindex $argv 0]
+set user [lindex $argv 1]
+set password [lindex $argv 2]
+set cliFile [lindex $argv 3]
+
+# Cli Sequence
+set fd [open $cliFile r]
+set cli [read $fd]
+close $fd
+set cmds [split $cli "\n"]
+
+# SSH login
+eval spawn ssh -o StrictHostKeyChecking=no -oHostKeyAlgorithms=+ssh-dss -oKexAlgorithms=diffie-hellman-group1-sha1 $ip -c 3des-cbc -l $user
+set prompt ":|>|#|\\\$"
+interact -o -nobuffer -re $prompt return
+send $password
+send "\r"
+interact -o -nobuffer -re $prompt return
+send "config terminal\r"
+
+#Send commands and commit.
+foreach line $cmds { 
+	interact -o -nobuffer -re $prompt return
+	send $line
+	send "\r"
+}
+
+# Exit
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+send "exit\r"
+interact -o -nobuffer -re $prompt return
+

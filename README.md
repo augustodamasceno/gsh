@@ -52,12 +52,14 @@ bash remove.sh
 | **gfree** | Runs free with -wht command |   
 | **gdocker** | Display a list of Docker commands |   
 
-## Security Scripts  
+## Security and Networking Scripts  
 | Script | Description |  
 | -- | -- |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist (in ~/kismet) |   
 | **ggpg** | Encrypt and decrypt files whith gnupg |  
 | **randstr** | Get a random string with n characters |  
+| **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
+| **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
 
 ## Miscellaneous Scripts  
 | Script | Description |  
