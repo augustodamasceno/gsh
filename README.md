@@ -1,6 +1,6 @@
 # Gin Shell or GSH   
  
-## This project is a collection of bash scripts and bash programming examples.   
+## This project is a collection of bash scripts.   
 
 ## How it works  
 All scripts are added in the folder .gsh in the home directory, and this directory is  
