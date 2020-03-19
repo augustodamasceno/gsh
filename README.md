@@ -30,13 +30,14 @@ bash remove.sh
 ## DEV and DEVOPS Scripts  
 | Script | Description |  
 | -- | -- |  
+| **ggithelp** | Git cheat sheet  |  
+| **ikill** | Interative kill to a process with the string in name |  
 | **gtop** | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
 | **gdu** | Get the total size of the current repository |  
 | **allusers** | List all users |  
 | **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
 | **getnames** | Find names of hosts from the lan base IP |  
 | **gkill** | Kill all process with the name |  
-| **ikill** | Interative kill to a process with the string in name |  
 | **gpsu** | Show all users with processes running |  
 | **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
 | **gvenvnew** | Create a new virtualenv with python in directory ~/virtualenv/virtualenv-name |  
@@ -67,7 +68,8 @@ bash remove.sh
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 
   
-# [Bash programming examples](https://github.com/augustomatheuss/gsh/tree/master/programming-examples) 
+## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
+ 
 
 ### Software Reference  
 
