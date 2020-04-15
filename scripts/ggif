@@ -1,0 +1,59 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script creates a gif from a list of images.
+#
+#	USAGE
+#     ggif IMAGES-FILTER GIF-FILENAME
+#	
+#		EXAMPLE:
+#			ggif *.png mygif.gif
+#	
+##
+
+if (( $# != 2 ))
+then
+	echo "You must provide 2 arguments, the filter
+	 for the images names and the name of the output gif."
+else
+	# All files with the user filter.
+	list=$(ls -a | grep $1)
+	
+	# Get the major width and height.
+	width=0
+	height=0
+	for img in ${list[*]}; do
+		w=$(identify -format "%w" "$img")> /dev/null
+		h=$(identify -format "%h" "$img")> /dev/null
+
+		if [ $w -gt $width ]
+		then
+			width=$w
+		fi
+		if [ $h -gt $height ]
+		then
+			height=$h
+		fi
+	done
+
+	# Resize all filtered files to width x height to temporary files.
+	# And print the files that will be used to make the gif.
+	echo "Using the following images to make the gif $2:"
+	for img in ${list[*]}; do
+		echo $img
+		convert -resize $width"x"$height"!" $img "$img.gsh.ggittemp"
+	done
+
+	# Filter by the generated resized images names.
+	list=$(ls -a | grep .gsh.ggittemp)
+
+	# Create the gif.
+	convert -delay 400 -loop 0 $list $2
+
+	# Remove the temporary resized images.
+	rm *.gsh.ggittemp
+fi
+

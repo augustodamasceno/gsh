@@ -9,16 +9,21 @@
 #  USAGE
 #	ENCRYPT
 #     ggpg -e KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME
+#	ENCRYPT AND SIGN
+#     ggpg -s KEY-ID FILE OUTPUT-ENCRYPTED-FILENAME
 #   DECRYPT
 #	  ggpg -d KEY-ID ENCRYPTED-FILE OUTPUT-FILENAME
 ##
 
 if [ $1 == "-e" ]
 then
-	gpg --recipient $1 --output $3 --encrypt $2
+	gpg --recipient $2 --output $4 --encrypt $3
+elif [ $1 == "-s" ]
+then
+	gpg --sign --recipient $2 --output $4 --encrypt $3
 elif [ $1 == "-d" ]
 then
-	gpg --recipient $1 --output $3 --decrypt $2
+	gpg --recipient $2 --output $4 --decrypt $3
 else
 	echo "There is no option: "$1" .Nothing Done!"
 fi

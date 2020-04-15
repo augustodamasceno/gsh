@@ -1,15 +1,15 @@
 # Gin Shell or GSH   
- 
+
 ## This project is a collection of bash scripts.   
 
 ## How it works  
 All scripts are added in the folder .gsh in the home directory, and this directory is  
 appended in the PATH variable (in the bash and zsh rcfiles).
- 
+
 ## Installation and Update  
 ```
-$ git clone https://github.com/augustomatheuss/gsh.git 
-$ cd gsh 
+$ git clone https://github.com/augustomatheuss/gsh.git
+$ cd gsh
 $ bash install.sh    
 ```
 
@@ -17,20 +17,22 @@ $ bash install.sh
 ```
 bash remove.sh
 ```
-  
-## Basic Scripts  
+
+## Miscellaneous Scripts  
 | Script | Description |  
 | -- | -- |  
 | **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
 | **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | **webimages** | Get all images on a website |  
 | **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
-| **pubip** | Get the public IP |    
-  
+| **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
+| **ggif** | Creates a gif from a list of images |    
+
 ## DEV and DEVOPS Scripts  
 | Script | Description |  
 | -- | -- |  
 | **ggithelp** | Git cheat sheet  |  
+| **pubip** | Get the public IP |    
 | **ikill** | Interative kill to a process with the string in name |  
 | **gtop** | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
 | **gdu** | Get the total size of the current repository |  
@@ -56,20 +58,15 @@ bash remove.sh
 ## Security and Networking Scripts  
 | Script | Description |  
 | -- | -- |  
-| **airkiss** | Run aircrack-ng with bigger pcapdump file from Kismet and a wordlist (in ~/kismet) |   
+| **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
 | **ggpg** | Encrypt and decrypt files whith gnupg |  
-| **randstr** | Get a random string with n characters |  
+| **grand** | Get a random string with n characters |  
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
 | **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
 
-## Miscellaneous Scripts  
-| Script | Description |  
-| -- | -- |  
-| **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 
-  
 ## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
- 
+
 
 ### Software Reference  
 
