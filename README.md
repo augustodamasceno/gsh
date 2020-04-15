@@ -59,7 +59,7 @@ bash remove.sh
 | Script | Description |  
 | -- | -- |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
-| **ggpg** | Encrypt, encrypt and sign, and decrypt files whith gnupg |  
+| **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
 | **grand** | Get a random string with n characters |  
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
 | **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
