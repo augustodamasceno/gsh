@@ -82,4 +82,9 @@ bash remove.sh
 * http://www.valgrind.org/  
 * https://www.gnu.org/software/bc/  
 * https://www.debian.org/CD/verify  
-* https://wiki.debian.org/ScreenShots   
+* https://wiki.debian.org/ScreenShots  
+* https://www.archlinux.org/  
+* https://www.openssl.org/docs/manmaster/man1/openssl.html  
+* https://www.kismetwireless.net/  
+* https://gnupg.org/  
+ 
