@@ -1,0 +1,26 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script derivates key from secure password hashing with openssl.
+#
+#  USAGE
+#	USING SHA-256
+#     ghmac DIGEST PASSWORD SALT
+#	DIGESTS     
+#		md2
+#		md5
+#		mdc2
+#		rmd160
+#		sha
+#		sha1
+#		sha224
+#		sha256
+#		sha384
+#		sha512
+##
+
+echo -n $2 | openssl $1 -hmac $3
+

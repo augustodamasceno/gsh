@@ -60,6 +60,7 @@ bash remove.sh
 | -- | -- |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
 | **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
+| **ghmac** | Derivates key from secure password hashing with openssl. |  
 | **grand** | Get a random string with n characters |  
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
 | **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
