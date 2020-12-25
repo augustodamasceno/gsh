@@ -32,13 +32,10 @@ bash remove.sh
 | Script | Description |  
 | -- | -- |  
 | **ggithelp** | Git cheat sheet  |  
-| **pubip** | Get the public IP |    
-| **ikill** | Interative kill to a process with the string in name |  
-| **gtop** | Display Linux processes by resources (the top 3) cpu stats needs sysstat |  
+| **ikill** | Interative kill to a process with a string in name |  
+| **gtop** | Display Linux processes by resources (the top 3) - needs: sysstat |  
 | **gdu** | Get the total size of the current repository |  
 | **allusers** | List all users |  
-| **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
-| **getnames** | Find names of hosts from the lan base IP |  
 | **gkill** | Kill all process with the name |  
 | **gpsu** | Show all users with processes running |  
 | **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
@@ -50,7 +47,6 @@ bash remove.sh
 | **gmonitor** | Visual monitoring the system (users, cpu and mem) |   
 | **gmvpre** | Add prefix to all files in current folder |  
 | **gmvpos** | Add postfix to all files in current folder |  
-| **pubiplog** | Public IP log and access |   
 | **gmv** | Rename all files with a pattern |    
 | **gfree** | Runs free with -wht command |   
 | **gdocker** | Display a list of Docker commands |   
@@ -58,6 +54,11 @@ bash remove.sh
 ## Security and Networking Scripts  
 | Script | Description |  
 | -- | -- |  
+| **pubip** | Get the public IP |    
+| **pubiplog** | Public IP log and access |   
+| **glookup** | Return the IPv4 or IPv6 from a name |
+| **getnames** | Find names of hosts from the lan base IP |  
+| **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
 | **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
 | **ghmac** | Derivates key from secure password hashing with openssl. |  
@@ -87,4 +88,4 @@ bash remove.sh
 * https://www.openssl.org/docs/manmaster/man1/openssl.html  
 * https://www.kismetwireless.net/  
 * https://gnupg.org/  
- 
+* https://www.ietf.org/rfc/rfc1035.txt 
