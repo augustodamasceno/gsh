@@ -18,29 +18,19 @@ $ bash install.sh
 bash remove.sh
 ```
 
-## Miscellaneous Scripts  
-| Script | Description |  
-| -- | -- |  
-| **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
-| **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
-| **webimages** | Get all images on a website |  
-| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
-| **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
-| **ggif** | Creates a gif from a list of images |    
-
 ## DEV and DEVOPS Scripts  
 | Script | Description |  
 | -- | -- |  
-| **ggithelp** | Git cheat sheet  |  
 | **ikill** | Interative kill to a process with a string in name |  
 | **gtop** | Display Linux processes by resources (the top 3) - needs: sysstat |  
 | **gdu** | Get the total size of the current repository |  
 | **allusers** | List all users |  
 | **gkill** | Kill all process with the name |  
 | **gpsu** | Show all users with processes running |  
+| **githelp** | Git cheat sheet  |  
 | **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
-| **gvenvnew** | Create a new virtualenv with python in directory ~/virtualenv/virtualenv-name |  
-| **gvenv** | source for a virtualenv in ~/.virtualenv/ |  
+| **gnenv** | Create a virtualenv with python 3 in the directory ~/virtualenv/<virtualenv-name> |  
+| **genv** | Activate a virtualenv in ~/.virtualenv/ |  
 | **gps** | ps aux command with human readable sizes |  
 | **ggitclone** | Clone a personal github or bitbucket repository |  
 | **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   
@@ -66,9 +56,17 @@ bash remove.sh
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
 | **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
 
+## Miscellaneous Scripts  
+| Script | Description |  
+| -- | -- |  
+| **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
+| **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
+| **webimages** | Get all images on a website |  
+| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
+| **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
+| **ggif** | Creates a gif from a list of images |    
 
 ## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
-
 
 ### Software Reference  
 
