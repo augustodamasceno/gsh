@@ -4,11 +4,16 @@
 ##
 #  This script is part of the GSH software.
 #
-#  This script generates a random MAC address.
-#
+#  This script generates a random MAC address
+#	 unicast and locally assigned.
 ##
 
 
-m=$(hexdump -n 6 -e '/1 "%02X" 1 ":"' /dev/random)
-echo ${m:0:17}
+# 2, 6, A and E ends with 0b10, that means local unicast.
+localUnicast=('2' '6' 'A' 'E')
 
+# Gets 12 random hexadecimals from /dev/random.
+m=$(hexdump -n 6 -e '/1 "%02X" 1 ":"' /dev/random)
+echo -n ${m:0:1}
+echo -n ${localUnicast[$(($RANDOM % 4))]}
+echo -n ${m:2:15}
