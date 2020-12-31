@@ -88,3 +88,4 @@ bash remove.sh
 * https://www.kismetwireless.net/  
 * https://gnupg.org/  
 * https://www.ietf.org/rfc/rfc1035.txt 
+* https://tools.ietf.org/html/rfc7042
