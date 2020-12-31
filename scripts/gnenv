@@ -16,5 +16,6 @@ if ! [ -d ~/.venv/ ]
 then
 	mkdir ~/.venv/
 fi
-virtualenv -p `which python3` "~/.venv/$1"
+cd ~/.venv
+virtualenv -p `which python3` "$1"
 

@@ -53,6 +53,7 @@ bash remove.sh
 | **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
 | **ghmac** | Derivates key from secure password hashing with openssl. |  
 | **grand** | Get a random string with n characters |  
+| **grandmac** | Get a random MAC address |
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
 | **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
 

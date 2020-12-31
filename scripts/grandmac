@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script generates a random MAC address.
+#
+##
+
+
+m=$(hexdump -n 6 -e '/1 "%02X" 1 ":"' /dev/random)
+echo ${m:0:17}
+
