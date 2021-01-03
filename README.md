@@ -49,7 +49,7 @@ bash remove.sh
 | **gmvpos** | Add postfix to all files in current folder |  
 | **gmv** | Rename all files with a pattern |    
 | **gfree** | Runs free with -wht command |   
-| **gdocker** | Display a list of Docker commands |   
+| **dockerhelp** | Display a list of Docker commands |   
 
 ## Security and Networking Scripts  
 | Script | Description |  

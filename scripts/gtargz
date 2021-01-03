@@ -1,0 +1,20 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script creates a tar.gz file with a folder's contents.
+#
+#  USAGE
+#    gtargz FOLDER-NAME
+##
+
+
+if [ -d $1 ]
+then
+	tar -czvf ""$1".tar.gz" $1
+else
+	echo "The folder "$1" does not exist!"
+fi
+
