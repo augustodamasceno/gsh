@@ -39,7 +39,7 @@ bash remove.sh
 | **gmvpos** | Add postfix to all files in current folder |  
 | **gmv** | Rename all files with a pattern |    
 | **gfree** | Runs free with -wht command |   
-| **gdocker** | Display a list of Docker commands |   
+| **dockerhelp** | Display a list of Docker commands |   
 
 ## Security and Networking Scripts  
 | Script | Description |  
@@ -66,6 +66,7 @@ bash remove.sh
 | **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | **ggif** | Creates a gif from a list of images |    
+| **gtargz** | Creates a tar.gz file with the contents of a folder |    
 
 ## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
 
