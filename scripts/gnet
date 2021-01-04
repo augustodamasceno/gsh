@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script shows all network connections.
+#
+#  USAGE
+#    gnet
+##
+
+lsof -Pnl +M -i4
+  

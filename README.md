@@ -22,28 +22,28 @@ bash remove.sh
 | Script | Description |  
 | -- | -- |  
 | **ikill** | Interative kill to a process with a string in name |  
-| **gtop** | Display Linux processes by resources (the top 3) - needs: sysstat |  
-| **gdu** | Get the total size of the current repository |  
-| **allusers** | List all users |  
 | **gkill** | Kill all process with the name |  
-| **gpsu** | Show all users with processes running |  
-| **githelp** | Git cheat sheet  |  
-| **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
-| **gnenv** | Create a virtualenv with python 3 in the directory ~/virtualenv/<virtualenv-name> |  
-| **genv** | Activate a virtualenv in ~/.virtualenv/ |  
+| **gtop** | Display Linux processes by resources (the top 3) - needs: sysstat |  
+| **gmonitor** | Visual monitoring the system (users, cpu and mem) |   
 | **gps** | ps aux command with human readable sizes |  
+| **gpsu** | Show all users with processes running |  
+| **allusers** | List all users |  
+| **gdu** | Get the total size of the current repository |  
+| **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
 | **ggitclone** | Clone a personal github or bitbucket repository |  
 | **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   
-| **gmonitor** | Visual monitoring the system (users, cpu and mem) |   
 | **gmvpre** | Add prefix to all files in current folder |  
 | **gmvpos** | Add postfix to all files in current folder |  
 | **gmv** | Rename all files with a pattern |    
+| **gtargz** | Creates a tar.gz file with the contents of a folder |    
 | **gfree** | Runs free with -wht command |   
 | **dockerhelp** | Display a list of Docker commands |   
+| **githelp** | Git cheat sheet  |  
 
 ## Security and Networking Scripts  
 | Script | Description |  
 | -- | -- |  
+| **gnet** | See all network connections |    
 | **pubip** | Get the public IP |    
 | **pubiplog** | Public IP log and access |   
 | **glookup** | Return the IPv4 or IPv6 from a name |
@@ -51,7 +51,7 @@ bash remove.sh
 | **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
 | **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
-| **ghmac** | Derivates key from secure password hashing with openssl. |  
+| **ghmac** | Derivates key from secure password hashing with openssl |  
 | **grand** | Get a random string with n characters |  
 | **grandmac** | Get a random MAC address locally assigned and unicast |
 | **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
@@ -61,12 +61,11 @@ bash remove.sh
 | Script | Description |  
 | -- | -- |  
 | **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
+| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
 | **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | **webimages** | Get all images on a website |  
-| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | **ggif** | Creates a gif from a list of images |    
-| **gtargz** | Creates a tar.gz file with the contents of a folder |    
 
 ## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
 
