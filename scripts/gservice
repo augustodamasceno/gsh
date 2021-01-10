@@ -1,0 +1,39 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script add a new service to the systemd.
+#  You must added your binary to the folder /usr/sbin before use this script.
+#
+#  USAGE
+#    gservice BINARY-NAME
+##
+
+
+echo -n "
+[Unit]
+Description=Generated automatically by GSH to the service $1
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/sbin/$1
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+" > $1".service"
+sudo cp $1".service" "/etc/systemd/system/"$1".service"
+sudo chmod 655 "/etc/systemd/system/"$1".service"
+sudo systemctl enable $1".service"
+sudo systemctl start $1".service"
+sudo systemctl status $1".service"
+
+if [ ! -f "/usr/sbin/$1" ]
+then
+	echo "Binary /usr/sbin/"$1" not found!"
+	echo "The service will not work until you add."
+fi
+

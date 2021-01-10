@@ -29,6 +29,8 @@ bash remove.sh
 | **gpsu** | Show all users with processes running |  
 | **allusers** | List all users |  
 | **gdu** | Get the total size of the current repository |  
+| **gservice** | Add a new service to the systemd |  
+| **gservice-conf** | Generates a systemd unit configuration |  
 | **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
 | **ggitclone** | Clone a personal github or bitbucket repository |  
 | **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   

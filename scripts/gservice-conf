@@ -1,0 +1,28 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script generates a systemd unit configuration.
+#
+#  USAGE
+#    gservice-conf SERVICE-NAME
+##
+
+if [ ! $# == 0 ]
+then
+echo -n "
+[Unit]
+Description=Generated automatically by GSH to the service $1
+
+[Service]
+Type=simple
+User=root
+ExecStart=/usr/sbin/$1
+Restart=on-abort
+
+[Install]
+WantedBy=multi-user.target
+"
+fi
