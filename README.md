@@ -8,7 +8,7 @@ appended in the PATH variable (in the bash and zsh rcfiles).
 
 ## Installation and Update  
 ```
-$ git clone https://github.com/augustomatheuss/gsh.git
+$ git clone https://github.com/augustodamasceno/gsh.git
 $ cd gsh
 $ bash install.sh    
 ```
@@ -69,7 +69,7 @@ bash remove.sh
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | **ggif** | Creates a gif from a list of images |    
 
-## [Bash programming examples](https://github.com/augustomatheuss/adlabs/tree/master/bash-notebook)
+## [My Bash Courseware](https://github.com/augustodamasceno/adlabs/blob/main/nix/nix001.md)
 
 ### Software Reference  
 
