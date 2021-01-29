@@ -1,0 +1,30 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  Utilities for pdf (merge or create from images)
+#
+#  USAGE
+#	MERGE ALL PDFS INTO ONE
+#     gpdf -m OUTPUT-FILENAME
+#	CONVERT ALL PNG FILES INTO A PDF FILE
+#     ggpg -cp OUTPUT-FILENAME
+#	CONVERT ALL JPG FILES INTO A PDF FILE
+#     ggpg -cj OUTPUT-FILENAME
+##
+
+if [ $1 == "-m" ]
+then
+	pdftk *.pdf cat output $2
+elif [ $1 == "-cp" ]
+then
+	convert *.png $2
+elif [ $1 == "-cj" ]
+then
+	convert *.jpg $2
+else
+	echo "There is no option: "$1" .Nothing Done!"
+fi
+

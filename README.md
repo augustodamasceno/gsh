@@ -64,6 +64,7 @@ bash remove.sh
 | -- | -- |  
 | **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
 | **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
+| **gpdf** | Utilities for pdf (merge or create from images) |  
 | **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
 | **webimages** | Get all images on a website |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
@@ -92,4 +93,6 @@ bash remove.sh
 * https://www.ietf.org/rfc/rfc1035.txt 
 * https://tools.ietf.org/html/rfc7042
 * https://systemd.io/
+* https://imagemagick.org/index.php
+* https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
 
