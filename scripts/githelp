@@ -40,6 +40,11 @@ git add <file>
 git add <folder>
 git add --all
 
+>> Remove file from remote
+git rm --cached <file>
+git commit -m \"<message>\"
+git push -u origin <branch>
+
 >> Commit.
 git commit -m \"<message>\"
 
