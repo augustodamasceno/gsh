@@ -52,7 +52,8 @@ bash remove.sh
 | **getnames** | Find names of hosts from the lan base IP |  
 | **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
 | **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
-| **ggpg** | Encrypt, encrypt and sign, and decrypt files with gnupg |  
+| **ggpg** | Encrypt, encrypt and sign, and decrypt files with GnuPG |  
+| **gpghelp** | GnuPG cheat sheet |  
 | **ghmac** | Derivates key from secure password hashing with openssl |  
 | **grand** | Get a random string with n characters |  
 | **grandmac** | Get a random MAC address locally assigned and unicast |

@@ -1,0 +1,47 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script is a GnuPG cheat sheet.
+#
+#  Reference: https://gist.github.com/augustodamasceno/94a7c8d05126f39e1ba2cc70bac22508
+##
+
+
+echo "
+GSH GnuPG cheat sheet
+
+>> Generate keys
+gpg --full-gen-key
+
+>> Export Public key
+gpg --output <output-filename>.pgp --armor --export <KEYID>
+
+>> Export PRIVATE key
+Do not share or upload to the cloud!! Use only for backup purposes.
+gpg --output <output-filename>.pgp --armor --export-secret-key <KEYID>
+
+>> Encrypt
+gpg --recipient <KEYID> --output <output-filename> --encrypt <file-to-encrypt>
+
+>> Sign
+gpg --output <output-filename>.sig --sign <file-to-sign>
+
+>> Encrypt and sign
+gpg --sign --recipient <KEYID> --output <output-filename> --encrypt <file-to-encrypt>
+
+>> Verify signature
+gpg --verify <signature-filename>.sig <file-to-verify>
+
+>> Decrypt
+gpg --recipient <KEYID> --output <output-filename> --decrypt <encrypted-file>
+
+>> Signing commits
+  > Configure the key
+    git config --global user.signingkey <KEYID>
+  > Commit
+    git commit -S -m your commit message
+
+" | less
