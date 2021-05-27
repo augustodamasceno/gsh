@@ -1,0 +1,14 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script update time from a ntp server.
+#
+#  USAGE
+#    gclock
+##
+
+sudo ntpdate -u a.st1.ntp.br
+

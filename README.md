@@ -41,6 +41,7 @@ bash remove.sh
 | **gfree** | Runs free with -wht command |   
 | **dockerhelp** | Display a list of Docker commands |   
 | **githelp** | Git cheat sheet  |  
+| **gclock** | Update time (using an official brazilian server) |
 
 ## Security and Networking Scripts  
 | Script | Description |  
