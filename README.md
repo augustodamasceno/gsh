@@ -42,6 +42,7 @@ bash remove.sh
 | **dockerhelp** | Display a list of Docker commands |   
 | **githelp** | Git cheat sheet  |  
 | **gclock** | Update time (using an official brazilian server) |
+| **genv** | Manage python virtualenvs |  
 
 ## Security and Networking Scripts  
 | Script | Description |  

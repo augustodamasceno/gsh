@@ -1,0 +1,45 @@
+#!/bin/bash
+
+
+##
+#  This script is part of the GSH software.
+#
+#  This script is an easy way to manage python virtualenvs
+#
+#  USAGE
+#    CREATES A NEW VIRTUALENV
+#      genv -n VENV-NAME
+#    ACTIVATES A VIRTUALENV
+#      genv -a VENV-NAME
+#    LIST ALL VIRTUALENVS IN ~/myenvs
+#      genv -l
+##
+
+
+if [[ ( $1 == "-n"  || $1 == "-a" ) ]] && [ $# -eq 2 ] && ( ! test -d ~/myvenvs )
+then
+	mkdir ~/myvenvs
+fi
+if [[ ( $1 == "-n"  &&  $# -eq 2 ) ]]
+then
+	python3 -m venv ~/myvenvs/$2
+elif [[ ( $1 == "-a" &&  $# -eq 2 ) ]]
+then
+	cd ~/myvenvs/$2
+	/bin/zsh -c  ". bin/activate; exec /bin/zsh -i"
+elif [ $1 == "-l" ]
+then
+	if ( test -d ~/myvenvs )
+	then
+		for i in $(ls ~/myvenvs)
+		do
+			echo $i
+		done
+	else
+		echo "There is none virtualenv in "$HOME"/myvenvs"
+	fi
+else
+	echo "There is no option: "$1" .Nothing Done!"
+	echo "Usage: genv [-n | -a | -l]"
+fi
+
