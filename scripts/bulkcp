@@ -27,5 +27,10 @@ while IFS= read -r file
 do
     src="${srcdir}/${file}"
     dst="${dstdir}/${file}"
-    cp "$src" "$dst"
+    if [ -f "$src" ]; then
+      echo "Copying $src to $dst"
+      cp "$src" "$dst"
+    else
+      echo "File $src does not exist"
+    fi
 done < "$file_list"
