@@ -43,6 +43,6 @@ fi
 
 # Copy all gsh scripts to the local instalation with execution permission.
 cp scripts/* ~/.gsh/
-chmod +x -R ~/.gsh/
+chmod +x ~/.gsh/*
 
 

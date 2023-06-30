@@ -29,6 +29,8 @@ do
     dst="${dstdir}/${file}"
     if [ -f "$src" ]; then
       echo "Copying $src to $dst"
+      destpath=$(dirname "$dst")
+      mkdir -p "$destpath"
       cp "$src" "$dst"
     else
       echo "File $src does not exist"
