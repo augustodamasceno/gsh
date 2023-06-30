@@ -1,0 +1,31 @@
+#!/bin/bash
+
+############################################
+# This script is part of the GSH software.
+# # Copyright (c) 2015-2023, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+USAGE="USAGE: bulkcp <FILE_WITH_LIST> <SOURCE> <DESTINATION>"
+
+if [ "$#" -ne 3 ]; then
+  echo "Wrong number of args. $USAGE" >&2
+  exit 1
+fi
+
+if [ ! -f "$1" ]; then
+  echo "$1 must be a file with the list of files to copy. $USAGE" >&2
+  exit 1
+fi
+
+file_list=$1
+srcdir=$2
+dstdir=$3
+
+while IFS= read -r file
+do
+    src="${srcdir}/${file}"
+    dst="${dstdir}/${file}"
+    cp "$src" "$dst"
+done < "$file_list"

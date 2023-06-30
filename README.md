@@ -1,6 +1,9 @@
 # Gin Shell or GSH   
-
 ## This project is a collection of bash scripts.   
+> # Copyright (c) 2015-2023, Augusto Damasceno.  
+> All rights reserved.  
+> SPDX-License-Identifier: GPL-3.0
+
 
 ## How it works  
 All scripts are added in the folder .gsh in the home directory, and this directory is  
