@@ -2,3 +2,5 @@ test
 ip-public.backup*
 ip-public.txt
 *.swp
+*DS_Store*
+scripts/tests

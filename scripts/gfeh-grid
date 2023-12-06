@@ -1,0 +1,37 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# Copyright (c) 2015-2023, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script makes a squared image grid using feh
+#
+#  USAGE
+#      ./gfeh-grid <FILE1> <FILE2> ... <FILEN>
+#  EXAMPLE	
+#      ./gfeh-grid *.jpg
+##
+
+STATUS_FEH_NOT_INSTALLED=1
+STATUS_UNSUPPORTED_FILE=2
+
+
+if ! command -v feh &> /dev/null; then
+    echo "feh is not installed"
+    exit $STATUS_FEH_NOT_INSTALLED
+fi
+
+if [ "$#" -gt 0 ]; then
+	sqrt_num_files=$(bc -l <<< "sqrt($#)") 
+	ceil_sqrt_num_files=$(echo $sqrt_num_files | awk '{printf("%d\n",$0+=$0<0?0:0.99999999999999999)}')
+	thumb_width=$((1920 / ($ceil_sqrt_num_files * $ceil_sqrt_num_files)))
+	thumb_height=$((1080 / ($ceil_sqrt_num_files * $ceil_sqrt_num_files)))
+	feh --montage --zoom --force-aliasing --thumb-width "$thumb_width" --thumb-height "$thumb_height" --geometry "$ceil_sqrt_num_files"x"$ceil_sqrt_num_files"+0+0 "$@"
+else
+	echo -e "You must provide at least one file.\n"
+fi

@@ -43,8 +43,6 @@ bash remove.sh
 | **gmv** | Rename all files with a pattern |    
 | **gtargz** | Creates a tar.gz file with the contents of a folder |    
 | **gfree** | Runs free with -wht command |   
-| **dockerhelp** | Display a list of Docker commands |   
-| **githelp** | Git cheat sheet  |  
 | **gclock** | Update time (using an official brazilian server) |
 | **genv** | Manage python virtualenvs |  
 
@@ -76,6 +74,7 @@ bash remove.sh
 | **webimages** | Get all images on a website |  
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | **ggif** | Creates a gif from a list of images |    
+| **gfeh-grid** | Makes a squared image grid using feh |   
 
 ## [My Bash Courseware](https://github.com/augustodamasceno/adlabs/blob/main/nix/nix001.md)
 
@@ -102,4 +101,5 @@ bash remove.sh
 * https://systemd.io/
 * https://imagemagick.org/index.php
 * https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
-
+* Aho, A., Kernighan, B. and Weinberger, P. (2023). The Awk Programming Language. Addison-Wesley Professional  
+* https://www.gnu.org/software/gawk/manual/gawk.html  
