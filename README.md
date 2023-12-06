@@ -76,8 +76,6 @@ bash remove.sh
 | **ggif** | Creates a gif from a list of images |    
 | **gfeh-grid** | Makes a squared image grid using feh |   
 
-## [My Bash Courseware](https://github.com/augustodamasceno/adlabs/blob/main/nix/nix001.md)
-
 ### Software Reference  
 
 * https://www.gnu.org/software/bash/  
