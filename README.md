@@ -23,7 +23,8 @@ bash remove.sh
 
 ## DEV and DEVOPS Scripts  
 | Script | Description |  
-| -- | -- |  
+| -- | -- | 
+| **gsysinfos** | Show main system informations |  
 | **bulkcp** | Copy all files from a list as relative paths of a source folder to a destination folder with the same subfolders |    
 | **ikill** | Interative kill to a process with a string in name |  
 | **gkill** | Kill all process with the name |  

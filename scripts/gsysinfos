@@ -1,0 +1,25 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# Copyright (c) 2015-2023, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script prints the main system informations
+##
+
+echo "OS: $(cat /etc/os-release | grep PRETTY_NAME | cut -d= -f2 | tr -d \")"
+echo "Kernel version: $(uname -r)"
+echo "Hostname: $(hostname -f)"
+echo "CPU: $(grep "model name" /proc/cpuinfo | head -n1 | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "CPU Cores: $(lscpu | grep "Core(s) per socket" | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "Threads per Core: $(lscpu | grep "Thread(s) per core" | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "Total Threads: $(lscpu | grep "^Thread(s)" | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "CPU MHz: $(lscpu | grep "MHz" | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "RAM: $(free -h | awk '/^Mem/ {print $2}')"
+echo "Disk usage: $(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}')"
+
