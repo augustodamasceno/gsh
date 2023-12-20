@@ -24,7 +24,6 @@ if [ $# -eq 0 ]; then
 fi
 
 response=$(curl -s "$GISTS_API_URL")
-echo $response
 if [ "$(echo -n $response | wc -m)" -lt 5 ] || [echo "$response" | grep -q '"message": "Not Found"'] ; then
     echo "The user does not exist. Nothing done."
 	exit 2
