@@ -1,0 +1,54 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# # Copyright (c) 2015-2023, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script download all gist pages from a git user
+#
+#  USAGE
+#    get-gists <GIT-USER>
+##
+
+USER=$1
+GISTS_API_URL="https://api.github.com/users/$USER/gists"
+
+if [ $# -eq 0 ]; then
+	echo "You must provide the git user."
+    exit 1
+fi
+
+response=$(curl -s "$GISTS_API_URL")
+echo $response
+if [ "$(echo -n $response | wc -m)" -lt 5 ] || [echo "$response" | grep -q '"message": "Not Found"'] ; then
+    echo "The user does not exist. Nothing done."
+	exit 2
+else
+	echo "User founded. Proceeding to download all gists."
+fi
+
+save_page() {
+	download_url=$1
+	filename="$USER-gist-$(echo "$download_url" | sed 's|.*/||').html"
+	echo "Downloading page $download_url as $filename"
+    curl -s "$download_url" > "$filename"
+}
+export -f save_page
+
+
+curl -s $GISTS_API_URL \
+| grep -o 'https://gist.github.com/[a-zA-Z0-9\._-]*' \
+| awk 'length($0) > 41' \
+| sort \
+| uniq \
+| while read -r url ; do
+	echo "$url" \
+    | sed "s|gist.github.com/\(.*\)\.git|gist.github.com/$USER/\1|" \
+    | xargs -I {} sh -c "save_page {}"
+done
+
