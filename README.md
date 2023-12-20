@@ -38,6 +38,7 @@ bash remove.sh
 | **gservice-conf** | Generates a systemd unit configuration |  
 | **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
 | **ggitclone** | Clone a personal github or bitbucket repository |  
+| **get-gists** | Downlaod all gist pages from a Git user |  
 | **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   
 | **gmvpre** | Add prefix to all files in current folder |  
 | **gmvpos** | Add postfix to all files in current folder |  

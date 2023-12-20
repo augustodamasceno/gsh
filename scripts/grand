@@ -10,11 +10,21 @@
 #  This script is part of the GSH software.
 #
 #  This script generates a random string with n characters
+#  -o option uses openssl instead of urandom
+#  -r option uses /dev/random instead of /dev/urandom  
 #
 #  USAGE
-#    grand NUMBER-OF-CHARACTERS
+#    grand <NUMBER-OF-CHARACTERS> [-o|-r]
 ##
 
-
-cat /dev/urandom | base64 | head -c $1
-
+if [ $# -eq 0 ]; then
+	cat /dev/urandom | base64 | head -c 16
+elif [ $# -eq 1 ]; then
+	cat /dev/urandom | base64 | head -c $1
+elif [ $# -eq 2 ] && [ "$2" == "-o" ]; then 
+	openssl rand -base64 $1
+elif [ $# -eq 2 ] && [ "$2" == "-r" ]; then 
+	cat /dev/random | base64 | head -c $1
+else
+	echo "Invalid Option. USAGE: grand <NUMBER-OF-CHARACTERS [-o|-r]>"
+fi
