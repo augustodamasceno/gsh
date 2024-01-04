@@ -47,6 +47,7 @@ bash remove.sh
 | **gfree** | Runs free with -wht command |   
 | **gclock** | Update time (using an official brazilian server) |
 | **genv** | Manage python virtualenvs |  
+| **gtxt-selection** | Extract a text file portion between the first and before last appearances of two specific strings |    
 
 ## Security and Networking Scripts  
 | Script | Description |  

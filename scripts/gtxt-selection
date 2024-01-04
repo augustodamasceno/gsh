@@ -1,0 +1,29 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# # Copyright (c) 2015-2024, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script download all gist pages from a git user
+#
+#  USAGE
+#    gtxt-selection <STRING-START> <STRING-END> <FILE>
+##
+
+if [[ $# -eq 3 ]] && [[ -f "$3" ]]; then
+	STRING_START="$1"
+	STRING_END="$2"
+	FILE="$3"
+	FIRST_LINE=$(grep -n -m 1 "$STRING_START" $FILE | awk -F':' '{print $1}')
+	LAST_LINE=$(grep -n -m 1 "$STRING_END" $FILE | awk -F':' '{print $1}')
+	awk -v first=$FIRST_LINE -v last=$LAST_LINE 'NR>=first && NR<last' $FILE
+else
+	echo "Wrong number of arguments or the file does not exists."
+	echo "  USAGE: gtxt-selection <STRING-START> <STRING-END> <FILE>"
+fi
+
