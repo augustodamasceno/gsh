@@ -9,7 +9,7 @@
 ##
 #  This script is part of the GSH software.
 #
-#  This script download all gist pages from a git user
+#  Commands to extract a text file portion between the first and before last appearances of two specific strings.  
 #
 #  USAGE
 #    gtxt-selection <STRING-START> <STRING-END> <FILE>

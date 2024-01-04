@@ -2,7 +2,7 @@
 ############################################
 # This script is part of the GSH software.
 # GSH Installer
-# # Copyright (c) 2015-2023, Augusto Damasceno.
+# # Copyright (c) 2015-2024, Augusto Damasceno.
 # All rights reserved.  
 # SPDX-License-Identifier: GPL-3.0
 ############################################
