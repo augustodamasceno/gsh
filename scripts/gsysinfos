@@ -19,6 +19,7 @@ echo "CPU: $(grep "model name" /proc/cpuinfo | head -n1 | cut -d: -f2 | sed 's/^
 echo "CPU Cores: $(lscpu | grep "Core(s) per socket" | cut -d: -f2 | sed 's/^[ \t]*//')"
 echo "Threads per Core: $(lscpu | grep "Thread(s) per core" | cut -d: -f2 | sed 's/^[ \t]*//')"
 echo "Total Threads: $(lscpu | grep "^Thread(s)" | cut -d: -f2 | sed 's/^[ \t]*//')"
+echo "$(lscpu | grep cache)"
 echo "CPU MHz: $(lscpu | grep "MHz" | cut -d: -f2 | sed 's/^[ \t]*//')"
 echo "RAM: $(free -h | awk '/^Mem/ {print $2}')"
 echo "Disk usage: $(df -h | awk '$NF=="/"{printf "%d/%dGB (%s)\n", $3,$2,$5}')"
