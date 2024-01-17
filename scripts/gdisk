@@ -1,0 +1,49 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# Copyright (c) 2015-2024, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script shows the space and inode usage for all disks and a specific path.
+#
+#  USAGE
+#      gdisk
+#      gdisk <PATH> 
+##
+
+
+if [ "$#" -gt 0 ]; then
+	path="$1"
+else
+	path="."
+fi
+bar="$(printf '%.0s*' {1..10})"
+bar_long="$(printf '%.0s*' {1..35})"
+echo "$bar  Block Usage  $bar"
+df -h
+echo "$bar_long"
+echo "$bar  Inode Usage  $bar"
+df -i
+echo "$bar_long"
+echo "$bar  Directory $path Usages $bar"
+if test -d "$path"; then
+	printf "%-64s" "Directory"
+	printf "%-16s" "Space Usage"
+	printf "%-16s\n" "Inode Usage"
+	while IFS= read -r dir; do
+		directory="$(printf "%-32s" "$dir")"
+		space="$(du -csh "$dir" | tail -n 1 | awk '{print $1}')"
+		inode="$(find "$dir" -type f | wc -l)"
+		printf "%-64s" "$directory"
+		printf "%-16s" "$space"
+		printf "%-16s\n" "$inode"
+	done < <(find $path -maxdepth 1 -type d)
+else
+	echo "The directory $path does not exist."
+fi
+

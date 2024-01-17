@@ -25,6 +25,7 @@ bash remove.sh
 | Script | Description |  
 | -- | -- | 
 | **gsysinfos** | Show main system informations |  
+| **gdisk** | Full Disks Report and Directory Report |  
 | **bulkcp** | Copy all files from a list as relative paths of a source folder to a destination folder with the same subfolders |    
 | **ikill** | Interative kill to a process with a string in name |  
 | **gkill** | Kill all process with the name |  
