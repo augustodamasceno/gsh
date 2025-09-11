@@ -20,12 +20,12 @@ then
 	if [ -f $HOME"/.bashrc" ]
 	then
 		echo "Appending "$HOME"/.gsh to the PATH variable in the bashrc file"
-		echo "PATH=$PATH:$HOME/.gsh" >> ~/.bashrc
+			echo "PATH=\"$PATH:$HOME/.gsh\"" >> ~/.bashrc
 	fi
 	if [ -f $HOME"/.zshrc" ]
 	then
 		echo "Appending "$HOME"/.gsh to the PATH variable in the zshrc file"
-		echo "PATH=$PATH:$HOME/.gsh" >> ~/.zshrc
+			echo "PATH=\"$PATH:$HOME/.gsh\"" >> ~/.zshrc
 	fi
 else
 	echo "Updating gsh scripts"
