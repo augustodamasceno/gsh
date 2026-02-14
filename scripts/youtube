@@ -1,0 +1,74 @@
+#!/bin/bash
+############################################
+# This script is part of the GSH software.
+# # Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.  
+# SPDX-License-Identifier: GPL-3.0
+############################################
+
+##
+#  This script is part of the GSH software.
+#
+#  This script is an easy way to download videos from YouTube using yt-dlp
+#
+#  USAGE
+#    DOWNLOAD VIDEOS FROM URLS FILE
+#      youtube.sh [executable_path] [url_file_path]
+#    EXAMPLES
+#      youtube.sh yt-dlp urls.txt
+#      youtube.sh /usr/local/bin/yt-dlp my_urls.txt
+##
+
+
+
+# Default values
+YTDLP_EXE=${1:-"yt-dlp"}
+URL_FILE=${2:-"urls.txt"}
+
+# If the executable name does not start with '/' or './' or is not in PATH, prepend './'
+if [[ "$YTDLP_EXE" != /* && "$YTDLP_EXE" != ./* && "$YTDLP_EXE" != *\\* && ! $(command -v "$YTDLP_EXE") ]]; then
+    YTDLP_EXE="./$YTDLP_EXE"
+fi
+
+# Check if the executable exists
+if [ ! -f "$YTDLP_EXE" ] && ! command -v "$YTDLP_EXE" >/dev/null 2>&1; then
+    echo "Error: Executable '$YTDLP_EXE' not found."
+    echo "Usage: $0 [executable_name] [url_file_path]"
+    exit 1
+fi
+
+# Ensure executable permissions for Linux binary (if local file)
+if [[ -f "$YTDLP_EXE" && "$YTDLP_EXE" != *.exe ]]; then
+    chmod +x "$YTDLP_EXE"
+fi
+
+# Check if the URL file exists
+if [ ! -f "$URL_FILE" ]; then
+    echo "Error: URL file '$URL_FILE' not found."
+    exit 1
+fi
+
+echo "Using Executable: $YTDLP_EXE"
+echo "Using URL File:   $URL_FILE"
+echo "-----------------------------------"
+
+# Read the file line by line
+while IFS= read -r url || [ -n "$url" ]; do
+    # Trim potential Windows CR characters and skip empty lines/comments
+    url=$(echo "$url" | tr -d '\r' | xargs)
+    [[ -z "$url" || "$url" =~ ^# ]] && continue
+
+    echo "Downloading: $url"
+    
+    # Execute the command
+    "$YTDLP_EXE" -f "bestvideo[ext=mp4]+bestaudio[ext=m4a]/best[ext=mp4]/best" --merge-output-format mp4 "$url"
+
+    if [ $? -eq 0 ]; then
+        echo "Success: $url"
+    else
+        echo "Failed: $url"
+    fi
+    echo "-----------------------------------"
+done < "$URL_FILE"
+
+echo "Batch processing complete."

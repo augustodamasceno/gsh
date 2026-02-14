@@ -1,6 +1,6 @@
 # Gin Shell or GSH   
 ## This project is a collection of bash scripts.   
-> # Copyright (c) 2015-2025, Augusto Damasceno.  
+> # Copyright (c) 2015-2026, Augusto Damasceno.  
 > All rights reserved.  
 > SPDX-License-Identifier: GPL-3.0
 
@@ -79,6 +79,7 @@ bash remove.sh
 | **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
 | **ggif** | Creates a gif from a list of images |    
 | **gfeh-grid** | Makes a squared image grid using feh |   
+| **youtube** | Download videos from YouTube using yt-dlp |  
 
 ### Software Reference  
 
