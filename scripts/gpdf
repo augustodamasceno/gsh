@@ -1,24 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Merges PDFs or converts images to a single PDF in the current directory
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  Utilities for pdf (merge or create from images)
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#	MERGE ALL PDFS INTO ONE
-#     gpdf -m OUTPUT-FILENAME
-#	CONVERT ALL PNG FILES INTO A PDF FILE
-#     ggpg -cp OUTPUT-FILENAME
-#	CONVERT ALL JPG FILES INTO A PDF FILE
-#     ggpg -cj OUTPUT-FILENAME
-##
+# Usage: gpdf -m OUT | -cp OUT | -cj OUT
 
 if [ $1 == "-m" ]
 then

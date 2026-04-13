@@ -1,23 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Derives an HMAC from a password and salt using a specified OpenSSL digest
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script derivates key from secure password hashing with openssl.
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#	USING SHA-256
-#     ghmac DIGEST PASSWORD SALT
-#	DIGESTS     
-#		md2
-#		md5
-#		mdc2
+# Usage: ghmac DIGEST PASSWORD SALT
 #		rmd160
 #		sha
 #		sha1

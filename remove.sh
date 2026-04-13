@@ -1,11 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# GSH Uninstaller
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Uninstalls the GSH software by removing its scripts and PATH modifications
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
+#
+# See https://github.com/augustodamasceno/gsh
+#
+# Usage: remove.sh
 
 echo "Removing gsh scripts"
 rm -rf ~/.gsh

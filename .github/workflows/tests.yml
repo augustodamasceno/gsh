@@ -1,0 +1,28 @@
+name: Tests
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+    branches: ["**"]
+
+jobs:
+  test:
+    name: Run test suite
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Make scripts and tests executable
+        run: |
+          chmod +x scripts/*
+          chmod +x tests/*.sh
+          chmod +x install-deps.sh
+
+      - name: Install dependencies
+        run: bash install-deps.sh -y
+
+      - name: Run tests
+        run: bash tests/run_tests.sh

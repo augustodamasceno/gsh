@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# gsh - Finds the IP address of a LAN host by MAC address using nmap
+# gsh - Generates a QR code PNG from the contents of a text file using qrencode
 #
 # Copyright (c) 2015-2026, Augusto Damasceno.
 # All rights reserved.
@@ -8,8 +8,8 @@
 #
 # See https://github.com/augustodamasceno/gsh
 #
-# Usage: getip NETWORK-ADDRESS MAC-ADDRESS
+# Usage: gqrcode TEXT-FILE IMAGE-OUTPUT
 
 
-sudo nmap -sn $1 > pinglan
-cat pinglan | grep -B 2 $2
+cat $1 | qrencode -o $2 -l M -s 5
+

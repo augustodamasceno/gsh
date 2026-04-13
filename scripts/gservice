@@ -1,20 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Creates and enables a systemd service unit for a binary in /usr/sbin
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script add a new service to the systemd.
-#  You must added your binary to the folder /usr/sbin before use this script.
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    gservice BINARY-NAME
-##
+# Usage: gservice BINARY-NAME
 
 
 echo -n "

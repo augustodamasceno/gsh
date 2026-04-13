@@ -9,100 +9,110 @@
 All scripts are added in the folder .gsh in the home directory, and this directory is  
 appended in the PATH variable (in the bash and zsh rcfiles).
 
-## Installation and Update  
+## Scripts
+
+**File & Directory Management**
+- `gbulkcp` — Copies files listed in a file, preserving relative paths, from source to destination
+- `gmv` — Batch-renames files matching two patterns by substituting a character
+- `grsync` — Rsyncs source to destination with checksum comparison and a progress bar
+- `gtxt-selection` — Extracts lines from a file between a start and stop delimiter string
+
+**System Monitoring & Info**
+- `gdisk` — Shows disk and inode usage for all mounts and per-subdirectory breakdown
+- `gmonitor` — Continuously prints system stats at a configurable interval
+- `gsysinfos` — Prints detailed system info for engineering, low-latency and hardware development
+- `gtop` — Displays the top 3 processes by CPU and top 3 by memory usage
+
+**Process Management**
+- `gikill` — Interactively selects and kills a process by name from a numbered list
+- `gkill` — Kills all processes whose name matches the given string
+
+**Networking**
+- `getip` — Finds the IP address of a LAN host by MAC address using nmap
+- `getnames` — Resolves hostnames of all active hosts on a LAN range using nmap
+
+**Security & Cryptography**
+- `ghmac` — Derives an HMAC from a password and salt using a specified OpenSSL digest
+- `grand` — Generates a random base64 string of a given byte length
+
+**Media & Documents**
+- `ggif` — Creates an animated GIF from a filtered set of images using ImageMagick
+- `gpdf` — Merges PDFs or converts images to a single PDF in the current directory
+- `gqrcode` — Generates a QR code PNG from the contents of a text file
+- `gyoutube` — Batch-downloads videos using yt-dlp, reading URLs from a file
+
+**Development & System Setup**
+- `genv` — Manages Python virtualenvs in `~/myvenvs`: create, activate, or list
+- `gservice` — Creates and enables a systemd service unit for a binary in `/usr/sbin`
+
+## Installation and Update
+
+Clone the repository and run the install script:
 ```
-$ git clone https://github.com/augustodamasceno/gsh.git
-$ cd gsh
-$ bash install.sh    
+git clone https://github.com/augustodamasceno/gsh.git
+cd gsh
+bash install.sh
 ```
+
+To also install all runtime dependencies:
+```
+bash install.sh --with-deps
+```
+
+Pass `-y` for non-interactive mode (auto-accepts prompts in dependency installation):
+```
+bash install.sh --with-deps -y
+```
+
+Scripts are installed to `~/.gsh`, which is appended to `PATH` in your `~/.bashrc` and/or `~/.zshrc`. Running the script again updates the existing installation.
 
 ## Uninstall
 ```
 bash remove.sh
 ```
 
-## DEV and DEVOPS Scripts  
-| Script | Description |  
-| -- | -- | 
-| **gsysinfos** | Show main system informations |  
-| **gdisk** | Full Disks Report and Directory Report |  
-| **bulkcp** | Copy all files from a list as relative paths of a source folder to a destination folder with the same subfolders |    
-| **ikill** | Interative kill to a process with a string in name |  
-| **gkill** | Kill all process with the name |  
-| **gtop** | Display Linux processes by resources (the top 3) - needs: sysstat |  
-| **gmonitor** | Visual monitoring the system (users, cpu and mem) |   
-| **gps** | ps aux command with human readable sizes |  
-| **gpsu** | Show all users with processes running |  
-| **allusers** | List all users |  
-| **gdu** | Get the total size of the current repository |  
-| **gservice** | Add a new service to the systemd |  
-| **gservice-conf** | Generates a systemd unit configuration |  
-| **gvalgrind** | Use memcheck from valgrind to search memory leaks |  
-| **ggitclone** | Clone a personal github or bitbucket repository |  
-| **get-gists** | Downlaod all gist pages from a Git user |  
-| **grsync** | Rsync with progress bar using archive mode and skip based on checksum |   
-| **gmvpre** | Add prefix to all files in current folder |  
-| **gmvpos** | Add postfix to all files in current folder |  
-| **gmv** | Rename all files with a pattern |    
-| **gtargz** | Creates a tar.gz file with the contents of a folder |    
-| **gfree** | Runs free with -wht command |   
-| **gclock** | Update time (using an official brazilian server) |
-| **genv** | Manage python virtualenvs |  
-| **gtxt-selection** | Extract a text file portion between the first and before last appearances of two specific strings |    
+Removes `~/.gsh` and cleans up the `PATH` entry from `~/.bashrc` and `~/.zshrc`.
 
-## Security and Networking Scripts  
-| Script | Description |  
-| -- | -- |  
-| **gnet** | See all network connections |    
-| **pubip** | Get the public IP |    
-| **pubiplog** | Public IP log and access |   
-| **glookup** | Return the IPv4 or IPv6 from a name |
-| **getnames** | Find names of hosts from the lan base IP |  
-| **getip** | Find IP of a machine from the network IP address and the MAC-ADDRESS |  
-| **airkiss** | Run aircrack-ng with bigger pcapdump file in ~/kismet and a wordlist  |   
-| **ggpg** | Encrypt, encrypt and sign, and decrypt files with GnuPG |  
-| **gpghelp** | GnuPG cheat sheet |  
-| **ghmac** | Derivates key from secure password hashing with openssl |  
-| **grand** | Get a random string with n characters |  
-| **grandmac** | Get a random MAC address locally assigned and unicast |
-| **getsonicwallconfig** | Export CLI configuration of a Sonicwall via SSH to a FTP server |  
-| **sonicwallconfigure** | Configure Sonicwall via SSH and CLI commands from file  |
 
-## Miscellaneous Scripts  
-| Script | Description |  
-| -- | -- |  
-| **cdl** | This script runs "cd" and "ls -lhat" between horizontal lines. |  
-| **glock** | Lock Screen (needs i3lock) for Window managers. For background image, copy a PNG image file to ~/.gsh/img/locks.png |  
-| **gpdf** | Utilities for pdf (merge or create from images) |  
-| **gshot** | Take a screenshot, the output is a png file with the time and date of the screenshot |  
-| **webimages** | Get all images on a website |  
-| **qrcode** | Generate a qrcode png image file from text on a file (needs qrencode) |  
-| **ggif** | Creates a gif from a list of images |    
-| **gfeh-grid** | Makes a squared image grid using feh |   
-| **youtube** | Download videos from YouTube using yt-dlp |  
 
-### Software Reference  
+### Software Reference
 
-* https://www.gnu.org/software/bash/  
-* https://wiki.archlinux.org/index.php/Bash  
-* https://www.linux.com/answers/what-purpose-path-variable  
-* https://github.com/kennethreitz/httpbin  
-* http://www.aircrack-ng.org/  
-* https://nmap.org/  
-* https://fukuchi.org/works/qrencode/  
-* https://dev.mysql.com/  
-* http://www.valgrind.org/  
-* https://www.gnu.org/software/bc/  
-* https://www.debian.org/CD/verify  
-* https://wiki.debian.org/ScreenShots  
-* https://www.archlinux.org/  
-* https://www.openssl.org/docs/manmaster/man1/openssl.html  
-* https://www.kismetwireless.net/  
-* https://gnupg.org/  
-* https://www.ietf.org/rfc/rfc1035.txt 
-* https://tools.ietf.org/html/rfc7042
+**Shell & System**
+* https://www.gnu.org/software/bash/
+* https://wiki.archlinux.org/index.php/Bash
+* https://www.linux.com/answers/what-purpose-path-variable
 * https://systemd.io/
+
+**Networking**
+* https://nmap.org/
+* https://www.ietf.org/rfc/rfc1035.txt
+* https://tools.ietf.org/html/rfc7042
+
+**Security & Cryptography**
+* https://www.openssl.org/docs/manmaster/man1/openssl.html
+* https://gnupg.org/
+
+**File & Sync**
+* https://rsync.samba.org/
+* https://metacpan.org/dist/File-Rename
+
+**System Monitoring & Hardware**
+* https://github.com/sysstat/sysstat
+* https://github.com/numactl/numactl
+* https://www.nongnu.org/dmidecode/
+* https://github.com/pciutils/pciutils
+* https://github.com/lsof-org/lsof
+* http://www.ivarch.com/programs/pv.shtml
+
+**Media & Documents**
 * https://imagemagick.org/index.php
 * https://www.pdflabs.com/tools/pdftk-the-pdf-toolkit/
-* Aho, A., Kernighan, B. and Weinberger, P. (2023). The Awk Programming Language. Addison-Wesley Professional  
-* https://www.gnu.org/software/gawk/manual/gawk.html  
+* https://fukuchi.org/works/qrencode/
+* https://github.com/yt-dlp/yt-dlp
+
+**Development**
+* https://docs.python.org/3/library/venv.html
+
+**Text Processing**
+* Aho, A., Kernighan, B. and Weinberger, P. (2023). The Awk Programming Language. Addison-Wesley Professional
+* https://www.gnu.org/software/gawk/manual/gawk.html

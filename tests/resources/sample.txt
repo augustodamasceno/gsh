@@ -1,0 +1,13 @@
+This is a sample text file used by the gsh test suite.
+
+Line before the section.
+Another line before the section.
+
+SECTION_START
+First line inside the section.
+Second line inside the section.
+Third line inside the section.
+SECTION_END
+
+Line after the section.
+Another line after the section.

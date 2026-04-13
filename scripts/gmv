@@ -1,21 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
-# SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
+#!/usr/bin/env bash
 #
-#  This script rename all files with a pattern.
-#  
-#  USAGE
-#    gmv FOLDER PATTERN-1 PATTERN-2 CHAR-TO-BE-REPLACED CHAR-TO-REPLACE
-#  EXAMPLE: replace all ":" for "_" in screenshot files in the folder "Pictures"
-#    gmv Pictures/ creenshot : _
-##
+# gsh - Batch-renames files matching two patterns by substituting a character
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
+# SPDX-License-Identifier: GPL-3.0
+#
+# See https://github.com/augustodamasceno/gsh
+#
+# Usage: gmv FOLDER PATTERN-1 PATTERN-2 CHAR REPLACEMENT
 
 
 # Folder

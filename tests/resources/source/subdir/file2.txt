@@ -1,0 +1,1 @@
+This is source file 2 in a subdirectory, used by bulkcp tests.

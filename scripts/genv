@@ -1,24 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Manages Python virtualenvs in ~/myvenvs: create, activate, or list
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script is an easy way to manage python virtualenvs
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    CREATES A NEW VIRTUALENV
-#      genv -n VENV-NAME
-#    ACTIVATES A VIRTUALENV
-#      genv -a VENV-NAME
-#    LIST ALL VIRTUALENVS IN ~/myenvs
-#      genv -l
-##
+# Usage: genv -n NAME | -a NAME | -l
 
 
 if [[ ( $1 == "-n"  || $1 == "-a" ) ]] && [ $# -eq 2 ] && ( ! test -d ~/myvenvs )

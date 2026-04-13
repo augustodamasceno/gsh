@@ -1,25 +1,59 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Displays the top 3 processes by CPU and top 3 by memory usage
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script Display Linux processes by resources (top 3).
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    gtop
-##
+# Usage: gtop
 
 
-printf '\033[0;31m----------TOP CPU USE--------\033[0m\n'
-ps aux | head -1
-ps aux | sort -rn -k 3,6 | head -3
-printf '\033[0;31m----------TOP MEMORY USE--------\033[0m\n'
-ps aux | head -1
-ps aux | sort -rn -k 4,6 | head -3
+BOLD='\033[1m'
+CYAN='\033[0;36m'
+YELLOW='\033[0;33m'
+RED='\033[0;31m'
+GREEN='\033[0;32m'
+RESET='\033[0m'
+
+section() {
+    local label=" $1 "
+    local cols
+    cols=$(tput cols 2>/dev/null || echo 60)
+    local pad=$(( (cols - ${#label} - 2) / 2 ))
+    local line
+    line=$(printf '%*s' "$pad" '' | tr ' ' '─')
+    printf "\n${CYAN}${BOLD}%s%s%s${RESET}\n" "$line" "$label" "$line"
+}
+
+print_table() {
+    local sort_field="$1"
+    ps aux --sort="$sort_field" 2>/dev/null | awk -v bold="$BOLD" -v yellow="$YELLOW" \
+        -v red="$RED" -v green="$GREEN" -v cyan="$CYAN" -v reset="$RESET" '
+    NR==1 {
+        printf "  %s%-30s %7s %6s %6s %8s  %s%s\n",
+            bold, "COMMAND", "PID", "%CPU", "%MEM", "RSS", "USER", reset
+        printf "  %s%s%s\n", yellow, sprintf("%-65s", ""), reset
+        next
+    }
+    NR==2 { color=red }
+    NR==3 { color=cyan }
+    NR==4 { color=green }
+    NR>1 && NR<=4 {
+        cmd = substr($11, 1, 30)
+        rss = int($6/1024)
+        printf "  %s%-30s%s %7s %6s %6s %7dM  %s\n",
+            color, cmd, reset, $2, $3, $4, rss, $1
+    }'
+}
+
+section "TOP CPU"
+print_table "-%cpu"
+
+section "TOP MEMORY"
+print_table "-%mem"
+
+printf '\n'
 

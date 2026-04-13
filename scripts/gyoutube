@@ -1,23 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Batch-downloads videos using yt-dlp, reading URLs from a file
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script is an easy way to download videos from YouTube using yt-dlp
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    DOWNLOAD VIDEOS FROM URLS FILE
-#      youtube.sh [executable_path] [url_file_path]
-#    EXAMPLES
-#      youtube.sh yt-dlp urls.txt
-#      youtube.sh /usr/local/bin/yt-dlp my_urls.txt
-##
+# Usage: gyoutube [EXECUTABLE_PATH] [URL_FILE]
 
 
 

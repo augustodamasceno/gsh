@@ -1,20 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
+#!/usr/bin/env bash
+#
+# gsh - Shows disk and inode usage for all mounts and per-subdirectory breakdown of a path
+#
 # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script shows the space and inode usage for all disks and a specific path.
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#      gdisk
-#      gdisk <PATH> 
-##
+# Usage: gdisk [PATH]
 
 
 if [ "$#" -gt 0 ]; then

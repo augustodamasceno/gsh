@@ -1,13 +1,16 @@
-#!/bin/bash
-
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Copies files listed in a file, preserving relative paths, from source to destination
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
+#
+# See https://github.com/augustodamasceno/gsh
+#
+# Usage: gbulkcp <FILE_WITH_LIST> <SOURCE> <DESTINATION>
 
-USAGE="USAGE: bulkcp <FILE_WITH_LIST> <SOURCE> <DESTINATION>"
+USAGE="USAGE: gbulkcp <FILE_WITH_LIST> <SOURCE> <DESTINATION>"
 
 if [ "$#" -ne 3 ]; then
   echo "Wrong number of args. $USAGE" >&2

@@ -1,19 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Extracts lines from a file between a start and stop delimiter string
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  Commands to extract a text file portion between the first and before last appearances of two specific strings.  
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    gtxt-selection <STRING-START> <STRING-END> <FILE>
-##
+# Usage: gtxt-selection STRING-START STRING-END FILE
 
 if [[ $# -eq 3 ]] && [[ -f "$3" ]]; then
 	STRING_START="$1"

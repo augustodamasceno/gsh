@@ -1,31 +1,22 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Creates an animated GIF from a filtered set of images using ImageMagick
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script creates a gif from a list of images.
+# See https://github.com/augustodamasceno/gsh
 #
-#	USAGE
-#     ggif IMAGES-FILTER GIF-FILENAME
-#	
-#		EXAMPLE:
-#			ggif *.png mygif.gif
-#	
-##
+# Usage: ggif IMAGES-FILTER GIF-FILENAME
 
 if (( $# != 2 ))
 then
 	echo "You must provide 2 arguments, the filter
 	 for the images names and the name of the output gif."
 else
-	# All files with the user filter.
-	list=$(ls -a | grep $1)
+	# All files matching the user filter (shell glob).
+	list=( $1 )
 	
 	# Get the major width and height.
 	width=0
@@ -53,7 +44,7 @@ else
 	done
 
 	# Filter by the generated resized images names.
-	list=$(ls -a | grep .gsh.ggittemp)
+	list=( *.gsh.ggittemp )
 
 	# Create the gif.
 	convert -delay 400 -loop 0 $list $2

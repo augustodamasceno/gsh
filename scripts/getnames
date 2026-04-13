@@ -1,19 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Resolves hostnames of all active hosts on a LAN range using nmap
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script finds names of hosts from the lan network address
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    getnames NETWORK-ADDRESS
-##
+# Usage: getnames NETWORK-ADDRESS
 
 
 sudo nmap -sn $1 > pinglan

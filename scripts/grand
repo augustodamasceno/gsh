@@ -1,21 +1,14 @@
-#!/bin/bash
-############################################
-# This script is part of the GSH software.
-# # Copyright (c) 2015-2026, Augusto Damasceno.
-# All rights reserved.  
+#!/usr/bin/env bash
+#
+# gsh - Generates a random base64 string of a given byte length
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
 # SPDX-License-Identifier: GPL-3.0
-############################################
-
-##
-#  This script is part of the GSH software.
 #
-#  This script generates a random string with n characters
-#  -o option uses openssl instead of urandom
-#  -r option uses /dev/random instead of /dev/urandom  
+# See https://github.com/augustodamasceno/gsh
 #
-#  USAGE
-#    grand <NUMBER-OF-CHARACTERS> [-o|-r]
-##
+# Usage: grand NUM-CHARS [-o|-r]
 
 if [ $# -eq 0 ]; then
 	cat /dev/urandom | base64 | head -c 16
