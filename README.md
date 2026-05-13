@@ -51,6 +51,7 @@ appended in the PATH variable (in the bash and zsh rcfiles).
 **Networking**
 - `getip` — Finds the IP address of a LAN host by MAC address using nmap
 - `getnames` — Resolves hostnames of all active hosts on a LAN range using nmap
+- `gwmirror` — Mirrors a website locally using wget
 
 **Security & Cryptography**
 - `ghmac` — Derives an HMAC from a password and salt using a specified OpenSSL digest
@@ -108,6 +109,7 @@ Removes `~/.gsh` and cleans up the `PATH` entry from `~/.bashrc` and `~/.zshrc`.
 * https://nmap.org/
 * https://www.ietf.org/rfc/rfc1035.txt
 * https://tools.ietf.org/html/rfc7042
+* https://www.gnu.org/software/wget/
 
 **Security & Cryptography**
 * https://www.openssl.org/docs/manmaster/man1/openssl.html

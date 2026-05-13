@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+#
+# gsh - Mirror a website locally using wget
+#
+# Adapted from:
+#   https://gist.github.com/crittermike/fe02c59fed1aeebd0a9697cf7e9f5c0c by crittermike
+#   https://gist.github.com/stvhwrd/985dedbe1d3329e68d70 by stvhwrd
+#
+# SPDX-License-Identifier: CC0-1.0
+# To the extent possible under law, the author(s) have dedicated all
+# copyright and related and neighboring rights to this software to the
+# public domain worldwide. This software is distributed without any warranty.
+# See https://creativecommons.org/publicdomain/zero/1.0/
+#
+# See https://github.com/augustodamasceno/gsh
+#
+# Usage: gwmirror <URL>
+
+USAGE="USAGE: gwmirror <URL>"
+
+if [ "$#" -ne 1 ]; then
+    echo "Wrong number of args. $USAGE" >&2
+    exit 1
+fi
+
+url="$1"
+
+# Extract the bare domain (strip scheme and path) to pass to --domains.
+domain=$(echo "$url" | sed -E 's|https?://||' | cut -d'/' -f1)
+
+wget \
+    --recursive \
+    --page-requisites \
+    --adjust-extension \
+    --span-hosts \
+    --convert-links \
+    --restrict-file-names=windows \
+    --domains "$domain" \
+    --no-parent \
+    --no-clobber \
+    --limit-rate=200k \
+    --random-wait \
+    -e robots=off \
+    -U mozilla \
+    "$url"
