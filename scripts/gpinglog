@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #
-# gsh - Pings a destination in an infinite loop, logging time,
+# gsh - Pings a destination continuously, logging time,
 #       and response to a timestamped CSV file.
 #
 # Copyright (c) 2015-2026, Augusto Damasceno.

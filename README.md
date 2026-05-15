@@ -51,7 +51,7 @@ appended in the PATH variable (in the bash and zsh rcfiles).
 **Networking**
 - `getip` — Finds the IP address of a LAN host by MAC address using nmap
 - `getnames` — Resolves hostnames of all active hosts on a LAN range using nmap
-- `gpinglog` — Pings a destination in an infinite loop, logging time and response to a timestamped CSV file
+- `gpinglog` — Pings a destination continuously, logging time and response to a timestamped CSV file; stops on Ctrl+C or after an optional duration
 - `gwmirror` — Mirrors a website locally using wget
 
 **Security & Cryptography**
