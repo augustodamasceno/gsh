@@ -9,23 +9,27 @@
 #
 # See https://github.com/augustodamasceno/gsh
 #
-# Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS]
+# Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS] [DURATION-SECONDS]
 
 DEFAULT_PACKET_SIZE=56
 DEFAULT_INTERVAL=2
+DEFAULT_DURATION=0
 
 if [ $# -lt 1 ]; then
-	echo "Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS]"
+	echo "Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS] [DURATION-SECONDS]"
 	exit 1
 fi
 
 DESTINATION="$1"
 PACKET_SIZE="${2:-$DEFAULT_PACKET_SIZE}"
 INTERVAL="${3:-$DEFAULT_INTERVAL}"
+DURATION="${4:-$DEFAULT_DURATION}"
+TIMER_PID=
 TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
 CSVFILE="gpinglog-${TIMESTAMP}.csv"
 
 cleanup() {
+	[[ -n "$TIMER_PID" ]] && kill "$TIMER_PID" 2>/dev/null
 	printf '\n'
 	echo "$(date '+%H:%M:%S') [INFO] Ping loop stopped."
 	printf '\n--- Gnuplot snippet to graph RTT from %s ---\n\n' "$CSVFILE"
@@ -47,8 +51,13 @@ EOF
 
 trap cleanup INT TERM
 
-echo "$(date '+%H:%M:%S') [INFO] Starting ping loop to $DESTINATION (packet size: ${PACKET_SIZE} bytes, interval: ${INTERVAL}s). Logging to $CSVFILE"
+echo "$(date '+%H:%M:%S') [INFO] Starting ping loop to $DESTINATION (packet size: ${PACKET_SIZE} bytes, interval: ${INTERVAL}s${DURATION:+, duration: ${DURATION}s}). Logging to $CSVFILE"
 echo "time,ip,size,rtt" > "$CSVFILE"
+
+if [[ "$DURATION" -gt 0 ]]; then
+	( sleep "$DURATION" && kill -TERM $$ ) &
+	TIMER_PID=$!
+fi
 
 while true; do
 	result=$(ping -c 1 -s "$PACKET_SIZE" "$DESTINATION" 2>&1)
