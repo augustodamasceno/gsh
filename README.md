@@ -51,6 +51,7 @@ appended in the PATH variable (in the bash and zsh rcfiles).
 **Networking**
 - `getip` — Finds the IP address of a LAN host by MAC address using nmap
 - `getnames` — Resolves hostnames of all active hosts on a LAN range using nmap
+- `gpinglog` — Pings a destination in an infinite loop, logging time and response to a timestamped CSV file
 - `gwmirror` — Mirrors a website locally using wget
 
 **Security & Cryptography**
@@ -96,6 +97,25 @@ bash remove.sh
 Removes `~/.gsh` and cleans up the `PATH` entry from `~/.bashrc` and `~/.zshrc`.
 
 
+
+## Script Output Examples
+
+### gpinglog
+
+```
+time,ip,size,rtt
+10:47:55,172.66.147.243,64,17.1
+10:47:57,172.66.147.243,64,20.0
+10:47:59,104.20.23.154,64,17.3
+10:48:01,172.66.147.243,64,18.0
+10:48:04,172.66.147.243,64,16.8
+10:48:06,172.66.147.243,64,20.2
+10:48:08,172.66.147.243,64,20.9
+```
+
+![gpinglog RTT graph](doc/img/gpinglog-20260515-104755.png)
+
+---
 
 ### Software Reference
 

@@ -1,0 +1,70 @@
+#!/usr/bin/env bash
+#
+# gsh - Pings a destination in an infinite loop, logging time,
+#       and response to a timestamped CSV file.
+#
+# Copyright (c) 2015-2026, Augusto Damasceno.
+# All rights reserved.
+# SPDX-License-Identifier: GPL-3.0
+#
+# See https://github.com/augustodamasceno/gsh
+#
+# Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS]
+
+DEFAULT_PACKET_SIZE=56
+DEFAULT_INTERVAL=2
+
+if [ $# -lt 1 ]; then
+	echo "Usage: gpinglog <DESTINATION> [PACKET-SIZE] [INTERVAL-SECONDS]"
+	exit 1
+fi
+
+DESTINATION="$1"
+PACKET_SIZE="${2:-$DEFAULT_PACKET_SIZE}"
+INTERVAL="${3:-$DEFAULT_INTERVAL}"
+TIMESTAMP=$(date +"%Y%m%d-%H%M%S")
+CSVFILE="gpinglog-${TIMESTAMP}.csv"
+
+cleanup() {
+	printf '\n'
+	echo "$(date '+%H:%M:%S') [INFO] Ping loop stopped."
+	printf '\n--- Gnuplot snippet to graph RTT from %s ---\n\n' "$CSVFILE"
+	cat <<EOF
+set terminal png size 1200,400
+set output "${CSVFILE%.csv}.png"
+set datafile separator ","
+set xdata time
+set timefmt "%H:%M:%S"
+set format x "%H:%M:%S"
+set xlabel "Time"
+set ylabel "RTT (ms)"
+set title "Ping RTT — ${CSVFILE}"
+set grid
+plot "< grep -v TIMEOUT ${CSVFILE}" every ::1 using 1:4 with linespoints pt 7 ps 0.5 lc rgb '#0077cc' title "RTT (ms)"
+EOF
+	exit 0
+}
+
+trap cleanup INT TERM
+
+echo "$(date '+%H:%M:%S') [INFO] Starting ping loop to $DESTINATION (packet size: ${PACKET_SIZE} bytes, interval: ${INTERVAL}s). Logging to $CSVFILE"
+echo "time,ip,size,rtt" > "$CSVFILE"
+
+while true; do
+	result=$(ping -c 1 -s "$PACKET_SIZE" "$DESTINATION" 2>&1)
+	timestamp=$(date '+%H:%M:%S')
+	parsed=$(echo "$result" | awk '
+		/bytes from/ {
+			ip = $4; sub(/:$/, "", ip)
+			size = $1
+			for (i = 1; i <= NF; i++) {
+				if ($i ~ /^time=/) { split($i, t, "="); rtt = t[2] }
+			}
+			printf "%s,%s,%s\n", ip, size, rtt
+			found = 1
+		}
+		END { if (!found) print "TIMEOUT" }
+	')
+	echo "$timestamp,$parsed" | tee -a "$CSVFILE"
+	sleep "$INTERVAL"
+done
