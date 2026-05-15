@@ -62,14 +62,13 @@ fi
 while true; do
 	result=$(ping -c 1 -s "$PACKET_SIZE" "$DESTINATION" 2>&1)
 	timestamp=$(date '+%H:%M:%S')
-	parsed=$(echo "$result" | awk '
+	parsed=$(echo "$result" | awk -v pkt_size="$PACKET_SIZE" '
 		/bytes from/ {
 			ip = $4; sub(/:$/, "", ip)
-			size = $1
 			for (i = 1; i <= NF; i++) {
 				if ($i ~ /^time=/) { split($i, t, "="); rtt = t[2] }
 			}
-			printf "%s,%s,%s\n", ip, size, rtt
+			printf "%s,%s,%s\n", ip, pkt_size, rtt
 			found = 1
 		}
 		END { if (!found) print "TIMEOUT" }
